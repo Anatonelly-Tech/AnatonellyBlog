@@ -11,21 +11,23 @@ export default function Home() {
       <InicialScreen />
       <Navbar />
       <div className='flex flex-col gap-96'>
-      <AboutUs />
-        <div id='AnatonellyTech' className='flex w-full h-96 bg-neutral-800'>
-          tech
-        </div>
+        {/* SobreNos */}
+        <AboutUs />
+
         <div id='AnatonellyLLC' className='flex w-full h-96 bg-neutral-800'>
-          241
+          AnatonellyLLC
         </div>
-        <div id='AnatonellyFretes' className='flex w-full h-96 bg-neutral-800'>
-          1251
-        </div>
-        <div id='SobreNos' className='flex w-full h-96 bg-neutral-800'>
-          12312
+        <div
+          id='AnatonellyTransportes'
+          className='flex w-full h-96 bg-neutral-800'
+        >
+          AnatonellyTransportes
         </div>
         <div id='AnatonellyTech' className='flex w-full h-96 bg-neutral-800'>
-          12616
+          AnatonellyTech
+        </div>
+        <div id='GlobalTransportes' className='flex w-full h-96 bg-neutral-800'>
+          GlobalTransportes
         </div>
       </div>
     </div>
