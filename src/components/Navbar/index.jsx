@@ -1,15 +1,40 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [selected, setSelected] = useState('SobreNos');
+  const [navbarHeight, setNavbarHeight] = useState(0);
+
+  useEffect(() => {
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      setNavbarHeight(navbar.offsetHeight);
+    }
+  }, []);
+
+  const handleNavigation = (sectionId) => {
+    setSelected(sectionId);
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offsetTop =
+        section.offsetTop - navbarHeight - (sectionId === SobreNos ? 20 : 0);
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
-    <div className='flex top-0 sticky items-center px-16 w-full h-20 gap-24 bg-neutral-800 shadow-md shadow-black/25'>
+    <div
+      id='navbar'
+      className='flex top-0 sticky items-center px-16 w-full h-20 gap-24 bg-neutral-800 shadow-md shadow-black/25'
+    >
       {selected == 'SobreNos' ? (
         <a
-          href='#SobreNos'
           className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between'
+          onClick={() => handleNavigation('SobreNos')}
         >
           <div className='h-1'></div>
           <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
@@ -20,10 +45,9 @@ const Navbar = () => {
         </a>
       ) : (
         <a
-          onClick={() => setSelected('SobreNos')}
+          onClick={() => handleNavigation('SobreNos')}
           className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
-          href='#SobreNos'
-          >
+        >
           <span className='text-white select-none px-2 text-lg font-bold'>
             Sobre nós
           </span>
@@ -31,8 +55,8 @@ const Navbar = () => {
       )}
       {selected == 'AnatonellyLLC' ? (
         <a
-        href='#AnatonellyLLC'
-        className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
+          className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
+          onClick={() => handleNavigation('AnatonellyLLC')}
         >
           <div className='h-1'></div>
           <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
@@ -43,11 +67,8 @@ const Navbar = () => {
         </a>
       ) : (
         <a
-        href='#AnatonellyLLC'
-        onClick={() => {
-          setSelected('AnatonellyLLC');
-        }}
-        className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
+          onClick={() => handleNavigation('AnatonellyLLC')}
+          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
         >
           <span className='text-white select-none px-2 text-lg font-bold'>
             Anatonelly LLC
@@ -56,10 +77,10 @@ const Navbar = () => {
       )}
       {selected == 'AnatonellyTransportes' ? (
         <a
-        href='#AnatonellyTransportes'
+          onClick={() => handleNavigation('AnatonellyTransportes')}
           className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
         >
-        <div className='h-1'></div>
+          <div className='h-1'></div>
           <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
             Anatonelly Transportes
           </span>
@@ -68,10 +89,7 @@ const Navbar = () => {
         </a>
       ) : (
         <a
-          href='#AnatonellyTransportes'
-          onClick={() => {
-            setSelected('AnatonellyTransportes');
-          }}
+          onClick={() => handleNavigation('AnatonellyTransportes')}
           className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
         >
           <span className='text-white select-none px-2 text-lg font-bold'>
@@ -81,9 +99,9 @@ const Navbar = () => {
       )}
       {selected == 'AnatonellyTech' ? (
         <a
-        href='#AnatonellyTech'
+          onClick={() => handleNavigation('AnatonellyTech')}
           className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
-          >
+        >
           <div className='h-1'></div>
           <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
             Anatonelly Tech
@@ -93,11 +111,8 @@ const Navbar = () => {
         </a>
       ) : (
         <a
-        href='#AnatonellyTech'
-        onClick={() => {
-          setSelected('AnatonellyTech');
-        }}
-        className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
+          onClick={() => handleNavigation('AnatonellyTech')}
+          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
         >
           <span className='text-white select-none px-2 text-lg font-bold'>
             Anatonelly Tech
@@ -106,10 +121,10 @@ const Navbar = () => {
       )}
       {selected == 'GlobalTransportes' ? (
         <a
-          href='#GlobalTransportes'
+          onClick={() => handleNavigation('GlobalTransportes')}
           className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
         >
-      <div className='h-1'></div>
+          <div className='h-1'></div>
           <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
             Global Transportes
           </span>
@@ -118,11 +133,8 @@ const Navbar = () => {
         </a>
       ) : (
         <a
-        href='#GlobalTransportes'
-        onClick={() => {
-          setSelected('GlobalTransportes');
-        }}
-        className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
+          onClick={() => handleNavigation('GlobalTransportes')}
+          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
         >
           <span className='text-white select-none px-2 text-lg font-bold'>
             Global Transportes
