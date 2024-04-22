@@ -5,27 +5,25 @@ const Navbar = () => {
   const [selected, setSelected] = useState('SobreNos');
 
   return (
-    <div
-      className='flex
-     fixed items-center px-16 w-full h-28 gap-24 bg-neutral-800 shadow-md shadow-black/25'
-    >
+    <div className='flex top-0 sticky items-center px-16 w-full h-20 gap-24 bg-neutral-800 shadow-md shadow-black/25'>
       {selected == 'SobreNos' ? (
         <a
           href='#SobreNos'
-          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700 rounded justify-end gap-8'
+          className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between'
         >
-          <span className='text-white select-none px-2 text-lg font-bold'>
+          <div className='h-1'></div>
+          <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
             Sobre nós
           </span>
 
-          <div className='flex w-full h-3 justify-end items-center bg-neutral-200'></div>
+          <div className=' flex w-full h-1 justify-end items-center bg-neutral-200'></div>
         </a>
       ) : (
         <a
           onClick={() => setSelected('SobreNos')}
           className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
           href='#SobreNos'
-        >
+          >
           <span className='text-white select-none px-2 text-lg font-bold'>
             Sobre nós
           </span>
@@ -33,22 +31,23 @@ const Navbar = () => {
       )}
       {selected == 'AnatonellyLLC' ? (
         <a
-          href='#AnatonellyLLC'
-          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700 rounded justify-end gap-8'
+        href='#AnatonellyLLC'
+        className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
         >
-          <span className='text-white select-none px-2 text-lg font-bold'>
+          <div className='h-1'></div>
+          <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
             Anatonelly LLC
           </span>
 
-          <div className='flex w-full h-3 justify-end items-center bg-neutral-200'></div>
+          <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
         </a>
       ) : (
         <a
-          href='#AnatonellyLLC'
-          onClick={() => {
-            setSelected('AnatonellyLLC');
-          }}
-          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
+        href='#AnatonellyLLC'
+        onClick={() => {
+          setSelected('AnatonellyLLC');
+        }}
+        className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
         >
           <span className='text-white select-none px-2 text-lg font-bold'>
             Anatonelly LLC
@@ -57,14 +56,15 @@ const Navbar = () => {
       )}
       {selected == 'AnatonellyTransportes' ? (
         <a
-          href='#AnatonellyTransportes'
-          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700 rounded justify-end gap-8'
+        href='#AnatonellyTransportes'
+          className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
         >
-          <span className='text-white select-none px-2 text-lg font-bold'>
+        <div className='h-1'></div>
+          <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
             Anatonelly Transportes
           </span>
 
-          <div className='flex w-full h-3 justify-end items-center bg-neutral-200'></div>
+          <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
         </a>
       ) : (
         <a
@@ -81,22 +81,23 @@ const Navbar = () => {
       )}
       {selected == 'AnatonellyTech' ? (
         <a
-          href='#AnatonellyTech'
-          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700 rounded justify-end gap-8'
-        >
-          <span className='text-white select-none px-2 text-lg font-bold'>
+        href='#AnatonellyTech'
+          className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
+          >
+          <div className='h-1'></div>
+          <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
             Anatonelly Tech
           </span>
 
-          <div className='flex w-full h-3 justify-end items-center bg-neutral-200'></div>
+          <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
         </a>
       ) : (
         <a
-          href='#AnatonellyTech'
-          onClick={() => {
-            setSelected('AnatonellyTech');
-          }}
-          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
+        href='#AnatonellyTech'
+        onClick={() => {
+          setSelected('AnatonellyTech');
+        }}
+        className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
         >
           <span className='text-white select-none px-2 text-lg font-bold'>
             Anatonelly Tech
@@ -106,21 +107,22 @@ const Navbar = () => {
       {selected == 'GlobalTransportes' ? (
         <a
           href='#GlobalTransportes'
-          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700 rounded justify-end gap-8'
+          className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
         >
-          <span className='text-white select-none px-2 text-lg font-bold'>
+      <div className='h-1'></div>
+          <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
             Global Transportes
           </span>
 
-          <div className='flex w-full h-3 justify-end items-center bg-neutral-200'></div>
+          <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
         </a>
       ) : (
         <a
-          href='#GlobalTransportes'
-          onClick={() => {
-            setSelected('GlobalTransportes');
-          }}
-          className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
+        href='#GlobalTransportes'
+        onClick={() => {
+          setSelected('GlobalTransportes');
+        }}
+        className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
         >
           <span className='text-white select-none px-2 text-lg font-bold'>
             Global Transportes
