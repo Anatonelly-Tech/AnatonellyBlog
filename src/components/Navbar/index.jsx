@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -17,6 +16,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -76,10 +76,8 @@ const Navbar = () => {
     >
       <div className='flex items-center w-full h-full gap-24 px-16'>
         {selected == 'SobreNos' ? (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between'
             onClick={() => handleNavigation('SobreNos')}
           >
@@ -89,25 +87,21 @@ const Navbar = () => {
             </span>
 
             <div className=' flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </Link>
+          </a>
         ) : (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             onClick={() => handleNavigation('SobreNos')}
             className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
           >
             <span className='text-white select-none px-2 text-lg font-bold'>
               Sobre nós
             </span>
-          </Link>
+          </a>
         )}
         {selected == 'AnatonellyLLC' ? (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
             onClick={() => handleNavigation('AnatonellyLLC')}
           >
@@ -117,25 +111,21 @@ const Navbar = () => {
             </span>
 
             <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </Link>
+          </a>
         ) : (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             onClick={() => handleNavigation('AnatonellyLLC')}
             className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
           >
             <span className='text-white select-none px-2 text-lg font-bold'>
               Anatonelly LLC
             </span>
-          </Link>
+          </a>
         )}
         {selected == 'AnatonellyTransportes' ? (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             onClick={() => handleNavigation('AnatonellyTransportes')}
             className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
           >
@@ -145,25 +135,21 @@ const Navbar = () => {
             </span>
 
             <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </Link>
+          </a>
         ) : (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             onClick={() => handleNavigation('AnatonellyTransportes')}
             className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
           >
             <span className='text-white select-none px-2 text-lg font-bold'>
               Anatonelly Transportes
             </span>
-          </Link>
+          </a>
         )}
         {selected == 'AnatonellyTech' ? (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             onClick={() => handleNavigation('AnatonellyTech')}
             className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
           >
@@ -173,25 +159,21 @@ const Navbar = () => {
             </span>
 
             <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </Link>
+          </a>
         ) : (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             onClick={() => handleNavigation('AnatonellyTech')}
             className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
           >
             <span className='text-white select-none px-2 text-lg font-bold'>
               Anatonelly Tech
             </span>
-          </Link>
+          </a>
         )}
         {selected == 'GlobalTransportes' ? (
-          <Link
+          <a
             activeClass='active'
-            smooth
-            spy
             onClick={() => handleNavigation('GlobalTransportes')}
             className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
           >
@@ -201,20 +183,21 @@ const Navbar = () => {
             </span>
 
             <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </Link>
+          </a>
         ) : (
-          <Link
+          <a
             onClick={() => handleNavigation('GlobalTransportes')}
             className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
           >
             <span className='text-white select-none px-2 text-lg font-bold'>
               Global Transportes
             </span>
-          </Link>
+          </a>
         )}
       </div>
       <div
-        className={`h-[3px] relative transition-width duration-1000 ${widthNavbar}`}>
+        className={`h-[3px] relative transition-width duration-1000 ${widthNavbar}`}
+      >
         <div className='bg-cyan-500 w-full h-full'></div>
       </div>
     </div>
