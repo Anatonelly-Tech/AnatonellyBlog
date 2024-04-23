@@ -7,6 +7,7 @@ const Navbar = () => {
   const [widthNavbar, setWidthNavbar] = useState('0');
   const [selected, setSelected] = useState('SobreNos');
   const [navbarHeight, setNavbarHeight] = useState(0);
+
   useEffect(() => {
     const navbar = document.getElementById('navbar');
     if (navbar) {
@@ -40,30 +41,30 @@ const Navbar = () => {
     setScrollPosition(position);
 
     switch (true) {
-      case position < 600:
+      case position <= 600:
         setSelected('SobreNos');
         setWidthNavbar('w-0');
         break;
-      case position > 600 && position < 1200:
-        setSelected('AnatonellyLLC');
-        setWidthNavbar('w-1/5');
+      case position > 600 && position < 4500:
+        setSelected('SobreNos');
+        setWidthNavbar('w-[10%]');
 
         break;
-      case position > 1200 && position < 1800:
-        setSelected('AnatonellyTransportes');
-        setWidthNavbar('w-2/5');
+      // case position > 1200 && position < 1800:
+      //   setSelected('AnatonellyTransportes');
+      //   setWidthNavbar('w-2/5');
 
-        break;
-      case position > 1800 && position < 2400:
-        setSelected('AnatonellyTech');
-        setWidthNavbar('w-3/5');
+      //   break;
+      // case position > 1800 && position < 2400:
+      //   setSelected('AnatonellyTech');
+      //   setWidthNavbar('w-3/5');
 
-        break;
-      case position > 2400 && position < 3000:
-        setSelected('GlobalTransportes');
-        setWidthNavbar('w-4/5');
+      //   break;
+      // case position > 2400 && position < 3000:
+      //   setSelected('GlobalTransportes');
+      //   setWidthNavbar('w-4/5');
 
-        break;
+      //   break;
       default:
         setWidthNavbar('w-full');
 
@@ -74,7 +75,7 @@ const Navbar = () => {
   return (
     <div
       id='navbar'
-      className='flex flex-col top-0 sticky items-start  w-full h-20  bg-neutral-800 shadow-md shadow-black/25 justify-center'
+      className='flex flex-col top-0 sticky items-start z-50  w-full h-20  bg-neutral-800 shadow-md shadow-black/25 justify-center'
     >
       <div className='flex items-center w-full h-full gap-24 px-16'>
         {selected == 'SobreNos' ? (
@@ -215,7 +216,11 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <div className={`${widthNavbar} bg-purple-500 h-1 relative left-0`}></div>
+      <div
+        className={`h-1 relative transition-width duration-1000 ${widthNavbar}`}
+      >
+        <div className='bg-purple-500 w-full h-full'></div>
+      </div>
     </div>
   );
 };
