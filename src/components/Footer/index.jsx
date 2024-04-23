@@ -32,7 +32,7 @@ const index = () => {
         </div>
         <div className='flex flex-col'>
           <div className='flex items-center gap-3'>
-            <MdEmail className='text-white' />
+            <MdEmail className='invert text-xl' />
             <span className='font-bold text-white'>Email:</span>
           </div>
           <div className='flex flex-col justify-center pl-10'>
@@ -46,7 +46,7 @@ const index = () => {
         </div>
         <div className='flex flex-col'>
           <div className='flex items-center gap-3'>
-            <FaPhoneAlt className='text-white' />
+            <FaPhoneAlt className='invert text-xl' />
             <span className='font-bold text-white'>Telefone:</span>
           </div>
           <div className='flex flex-col justify-center pl-10'>
@@ -55,7 +55,7 @@ const index = () => {
         </div>
         <div className='flex flex-col'>
           <div className='flex items-center gap-3'>
-            <FaMapPin className='text-white' />
+            <FaMapPin className='invert text-xl' />
             <span className='font-bold text-white'>Localização:</span>
           </div>
           <div className='flex flex-col justify-center pl-10'>
