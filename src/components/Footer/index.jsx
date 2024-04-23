@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
-import { MdEmail } from 'react-icons/md';
 import { FaMapPin, FaPhoneAlt } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const index = () => {
   return (
@@ -26,13 +27,15 @@ const index = () => {
           <img draggable={false} src='/Footer/Whatsapp.png' alt='' />
         </a>
       </div>
-      <div className='w-1/3 flex flex-col justify-center gap-5'>
+      <div className='w-1/3 flex flex-col justify-center gap-5 '>
         <div className='flex items-center justify-center'>
           <span className='text-white font-black text-4xl'>FALE CONOSCO</span>
         </div>
         <div className='flex flex-col'>
-          <div className='flex items-center gap-3'>
-            <MdEmail className='text-white' />
+          <div className='flex items-center gap-3 text-white'>
+            <span className='text-white'>
+              <MdEmail className='invert text-2xl' />
+            </span>
             <span className='font-bold text-white'>Email:</span>
           </div>
           <div className='flex flex-col justify-center pl-10'>
@@ -46,7 +49,7 @@ const index = () => {
         </div>
         <div className='flex flex-col'>
           <div className='flex items-center gap-3'>
-            <FaPhoneAlt className='text-white' />
+            <FaPhoneAlt className='invert text-2xl' />
             <span className='font-bold text-white'>Telefone:</span>
           </div>
           <div className='flex flex-col justify-center pl-10'>
@@ -55,7 +58,7 @@ const index = () => {
         </div>
         <div className='flex flex-col'>
           <div className='flex items-center gap-3'>
-            <FaMapPin className='text-white' />
+            <FaMapPin className='invert text-2xl' />
             <span className='font-bold text-white'>Localização:</span>
           </div>
           <div className='flex flex-col justify-center pl-10'>
