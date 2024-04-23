@@ -7,6 +7,7 @@ const Navbar = () => {
   const [widthNavbar, setWidthNavbar] = useState('0');
   const [selected, setSelected] = useState('SobreNos');
   const [navbarHeight, setNavbarHeight] = useState(0);
+
   useEffect(() => {
     const navbar = document.getElementById('navbar');
     if (navbar) {
@@ -41,29 +42,25 @@ const Navbar = () => {
     setScrollPosition(position);
 
     switch (true) {
-      case position < 600:
-        setSelected("SobreNos");
-        setWidthNavbar("w-0");
+      case position <= 600:
+        setSelected('SobreNos');
+        setWidthNavbar('w-0');
         break;
       case position > 600 && position < 4500:
-        setSelected("SobreNos");
-        setWidthNavbar("w-[10%]");
-
+        setSelected('SobreNos');
+        setWidthNavbar('w-[10%]');
         break;
       // case position > 1200 && position < 1800:
-      //   setSelected("AnatonellyTransportes");
-      //   setWidthNavbar("w-2/5");
-
+      //   setSelected('AnatonellyTransportes');
+      //   setWidthNavbar('w-2/5');
       //   break;
       // case position > 1800 && position < 2400:
-      //   setSelected("AnatonellyTech");
-      //   setWidthNavbar("w-3/5");
-
+      //   setSelected('AnatonellyTech');
+      //   setWidthNavbar('w-3/5');
       //   break;
       // case position > 2400 && position < 3000:
-      //   setSelected("GlobalTransportes");
-      //   setWidthNavbar("w-4/5");
-
+      //   setSelected('GlobalTransportes');
+      //   setWidthNavbar('w-4/5');
       //   break;
       default:
         setWidthNavbar('w-full');
@@ -217,8 +214,7 @@ const Navbar = () => {
         )}
       </div>
       <div
-        className={`h-[3px] relative transition-width duration-1000 ${widthNavbar}`}
-      >
+        className={`h-[3px] relative transition-width duration-1000 ${widthNavbar}`}>
         <div className='bg-cyan-500 w-full h-full'></div>
       </div>
     </div>
