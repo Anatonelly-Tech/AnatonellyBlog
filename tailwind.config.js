@@ -25,6 +25,15 @@ module.exports = {
         extrabold: 800,
         black: 900,
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in-out',
+      },
     },
   },
   plugins: [],
