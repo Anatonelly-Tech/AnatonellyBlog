@@ -214,8 +214,7 @@ const Navbar = () => {
         )}
       </div>
       <div
-        className={`h-[3px] relative transition-width duration-1000 ${widthNavbar}`}
-      >
+        className={`h-[3px] relative transition-width duration-1000 ${widthNavbar}`}>
         <div className='bg-cyan-500 w-full h-full'></div>
       </div>
     </div>
