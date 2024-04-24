@@ -2,7 +2,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 import React, { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 
 // Components
 import CardGuidance from '@/components/CardGuidance';
@@ -42,12 +41,15 @@ const index = () => {
     opacity: '0',
   };
   useEffect(() => {
-    const sr = ScrollReveal();
-    // ScrollReveal().reveal("#SobreNos", { delay: 500 });
-    sr.reveal('#SobreNosTexto1', TitleLetter);
-    sr.reveal('#SobreNosTexto2', paragraph);
-    sr.reveal('#SobreNosTexto3', Lists);
-    sr.reveal('#SobreNosImg', Img);
+    async function loadReveal() {
+      const sr = (await import('scrollreveal')).default();
+
+      sr.reveal('#SobreNosTexto1', TitleLetter);
+      sr.reveal('#SobreNosTexto2', paragraph);
+      sr.reveal('#SobreNosTexto3', Lists);
+      sr.reveal('#SobreNosImg', Img);
+    }
+    loadReveal();
   }, []);
 
   return (
