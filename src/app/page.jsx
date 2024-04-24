@@ -5,6 +5,7 @@ import InicialScreen from '@/components/InicialScreen';
 import Navbar from '@/components/Navbar';
 import AboutUs from '@/components/AboutUs';
 import Footer from '@/components/Footer';
+import AnatonellyLLC from '@/components/AnatonellyLLC';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <div className='flex flex-col gap-96'>
         {/* SobreNos */}
         <AboutUs />
+        <AnatonellyLLC />
         {/* Footer */}
         <Footer />
       </div>
