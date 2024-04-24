@@ -11,7 +11,7 @@ export default function Home() {
     <div className='min-h-screen h-auto w-full'>
       <InicialScreen />
       <Navbar />
-      <div className='h-screen'>
+      <div className='h-screen bg-neutral-800'>
         <Carousel />
       </div>
       <div className='flex flex-col gap-96'>

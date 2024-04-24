@@ -6,14 +6,15 @@
 .bodyCarousel {
   height: 100%;
   touch-action: none;
+  padding-bottom: 350px;
 }
+
 .bodyCarousel {
   overflow: hidden;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 
-  background: #262626;
   -webkit-perspective: 1000px;
   perspective: 1000px;
 

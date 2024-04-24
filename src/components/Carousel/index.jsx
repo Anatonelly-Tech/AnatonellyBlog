@@ -170,7 +170,6 @@ x = 283.3333333333333
             id='p'
             src='/InicialScreen/AnatonellyTech.svg'
             alt=''
-            srcset=''
           />
         </div>
         <div id='ground'></div>
