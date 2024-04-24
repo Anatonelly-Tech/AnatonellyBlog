@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <div className='min-h-screen h-auto w-full'>
       <InicialScreen />
-       <Navbar /> 
-      <div className='w-screen h-screen flex item-center justify-center flex-col bg-neutral-50'>
-        <Carousel /> 
+      <Navbar />
+      <div className='w-screen h-screen flex item-center justify-center flex-col bg-neutral-800'>
+        <Carousel />
       </div>
       <div className='flex flex-col gap-96'>
-         <AboutUs />
+        <AboutUs />
         <Footer /> *
       </div>
     </div>

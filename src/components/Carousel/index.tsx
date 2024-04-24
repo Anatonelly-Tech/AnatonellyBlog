@@ -1,8 +1,8 @@
 'use client';
 import * as React from 'react';
-import { createRoot } from 'react-dom/client';
+
 import { Carousel, CarouselItem, CarouselRef } from 'react-round-carousel';
-import Footer from '@/components/Footer';
+
 const itemsCarrousel = [
   {
     imagem: '/Carousel/img1.jpg',
