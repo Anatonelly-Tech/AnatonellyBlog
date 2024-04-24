@@ -57,7 +57,10 @@ const index = () => {
       id='SobreNos'
       className='w-full h-auto flex flex-col overflow-x-hidden'
     >
-      <span id='SobreNosTexto1' className='text-8xl px-14 font-black '>
+      <span
+        id='SobreNosTexto1'
+        className=' bg-neutral-800 text-8xl px-14 font-black text-white '
+      >
         Sobre nós
       </span>
       <div className='h-screen w-full bg-neutral-800 flex justify-center items-center p-5'>
