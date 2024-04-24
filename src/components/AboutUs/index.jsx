@@ -55,15 +55,15 @@ const index = () => {
   return (
     <div
       id='SobreNos'
-      className='w-full h-auto flex flex-col overflow-x-hidden'
+      className='w-full h-auto flex flex-col overflow-x-hidden bg-neutral-800 '
     >
       <span
         id='SobreNosTexto1'
-        className=' bg-neutral-800 text-8xl px-14 font-black text-white '
+        className=' text-8xl px-14 font-black text-white '
       >
         Sobre nós
       </span>
-      <div className='h-screen w-full bg-neutral-800 flex justify-center items-center p-5'>
+      <div className='h-screen w-full flex justify-center items-center p-5'>
         <div className='flex flex-col justify-center items-start gap-10'>
           <span
             id='SobreNosTexto2'
@@ -88,7 +88,7 @@ const index = () => {
         </div>
       </div>
 
-      <div className='h-screen w-full flex  pt-10 gap-6'>
+      <div className='h-screen w-full flex bg-neutral-200 pt-10 gap-6'>
         <div className='flex flex-col w-2/3 items-center justify-center gap-5'>
           <span id='SobreNosTexto1' className='text-5xl font-bold'>
             Como Surgiu?
@@ -162,7 +162,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className='h-screen w-full bg-neutral-800 flex flex-col justify-center items-center gap-10 p-5'>
+      <div className='h-screen w-full flex flex-col justify-center items-center gap-10 p-5'>
         <span id='SobreNosTexto3' className='text-white text-5xl font-bold'>
           Nossos Diferenciais
         </span>
@@ -203,7 +203,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className='h-auto w-full flex justify-center items-center flex-col gap-32 p-6 pt-20'>
+      <div className='h-auto w-full bg-neutral-200 flex justify-center items-center flex-col gap-32 p-6 pt-20'>
         <span id='SobreNosTexto1' className='text-5xl font-black '>
           Orientação Estratégica
         </span>
