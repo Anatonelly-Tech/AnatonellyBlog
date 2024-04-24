@@ -4,6 +4,9 @@
 import React, { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 
+// Components
+import CardGuidance from '@/components/CardGuidance';
+
 // Icons
 import { FaHandshake } from 'react-icons/fa';
 import { RiMedalFill } from 'react-icons/ri';
@@ -205,13 +208,13 @@ const index = () => {
               Missão
             </span>
             <div className='flex flex-col items-center gap-4  '>
-              <span className='w-1/2 text-lg text-center '>
+              <span className='md:w-1/2 xxs:w-full text-lg text-center '>
                 A empresa tem como objetivo primordial otimizar toda a cadeia de
                 suprimentos, desde a coleta e armazenamento até a distribuição
                 dos produtos, garantindo que cada etapa do processo seja
                 executada com excelência.
               </span>
-              <span className='w-1/2 text-lg text-center h-full'>
+              <span className='md:w-1/2 xxs:w-full text-lg text-center h-full'>
                 Para isso, ela conta com uma equipe altamente qualificada,
                 tecnologia de ponta e uma ampla rede de parceiros logísticos,
                 que permitem a agilidade nas operações e a maximização da
@@ -228,7 +231,7 @@ const index = () => {
           <div className='flex'>
             <img
               src='/AboutUs/OrientacaoEstrategica.png'
-              className='w-1/3 h-80 object-contain'
+              className='xxs:hidden md:flex w-1/3 h-80 object-contain'
               alt=''
             />
             <div className='flex flex-col  justify-center w-full gap-5 '>
@@ -260,63 +263,47 @@ const index = () => {
             Valores
           </span>
           <span>O que move nossa empresa é você!</span>
-          <div className='flex flex-col gap-10 items-center justify-center'>
-            <div className='flex items-center justify-center w-full gap-5 '>
-              <div className='flex flex-col gap-3 items-center justify-center bg-neutral-800 rounded-md shadow-lg shadow-black hover:bg-neutral-900 hover:scale-105 transition-all duration-300 p-4'>
-                <FaHandshake size={30} className='invert' />
-                <span className='font-bold text-lg text-white'>
-                  Compromisso
-                </span>
-                <span className='text-center text-white'>
-                  Nossa empresa reconhece a importância do cumprimento de prazos
-                  e da garantia de satisfação dos clientes em todas as etapas do
-                  processo logístico.
-                </span>
-              </div>
-              <div className='flex flex-col gap-3 items-center justify-center bg-neutral-800 rounded-md shadow-lg shadow-black hover:bg-neutral-900 hover:scale-105 transition-all duration-300 p-4'>
-                <RiMedalFill size={30} className='invert' />
-                <span className='font-bold text-lg text-white'>Excelência</span>
-                <span className='text-center text-white'>
-                  Investimos constantemente em tecnologia, rastreamento em tempo
-                  real e sistemas avançados para garantir precisão e segurança
-                  em toda entrega.
-                </span>
-              </div>
-              <div className='flex flex-col gap-3 items-center justify-center bg-neutral-800 rounded-md shadow-lg shadow-black hover:bg-neutral-900 hover:scale-105 transition-all duration-300 p-4'>
-                <HiUserGroup size={30} className='invert' />
-                <span className='font-bold text-lg text-white'>
-                  Parcerias estratégicas
-                </span>
-                <span className='text-center text-white'>
-                  Estamos sempre nos fortalecendo com ajuda de nossos parceiros,
-                  com isso oferecemos sempre o melhor serviço com os melhores
-                  profissionais do mercado!
-                </span>
-              </div>
+          <div className='flex flex-col md:gap-10 xxs:gap-5 items-center justify-center'>
+            <div className='flex xxs:flex-col md:flex-row  items-center justify-center w-full gap-5 '>
+              <CardGuidance
+                icon={<FaHandshake size={30} className='invert' />}
+                title={'Compromisso'}
+                text={
+                  'Nossa empresa reconhece a importância do cumprimento de prazose da garantia de satisfação dos clientes em todas as etapas do processo logístico.'
+                }
+              />
+
+              <CardGuidance
+                icon={<RiMedalFill size={30} className='invert' />}
+                title={'Excelência'}
+                text={
+                  'Investimos constantemente em tecnologia, rastreamento em tempo real e sistemas avançados para garantir precisão e segurança em toda entrega.'
+                }
+              />
+
+              <CardGuidance
+                icon={<HiUserGroup size={30} className='invert' />}
+                title={'Parcerias estratégicas'}
+                text={
+                  'Estamos sempre nos fortalecendo com ajuda de nossos parceiros, com isso oferecemos sempre o melhor serviço com os melhores profissionais do mercado!'
+                }
+              />
             </div>
-            <div className='flex items-center justify-center w-full gap-5 '>
-              <div className='flex flex-col gap-3 w-1/3 items-center justify-center bg-neutral-800 rounded-md shadow-lg shadow-black hover:bg-neutral-900 hover:scale-105 transition-all duration-300 p-4'>
-                <FaRecycle size={30} className='invert' />
-                <span className='font-bold text-lg text-white'>
-                  Sustentabilidade
-                </span>
-                <span className='text-center text-white'>
-                  Entre nossas ações envolvidas estão a reutilização de
-                  materiais que seriam descartados na natureza para produção de
-                  mobília sustentável.
-                </span>
-              </div>
-              <div className='flex flex-col gap-3 w-1/3 items-center justify-center bg-neutral-800 rounded-md shadow-lg shadow-black hover:bg-neutral-900 hover:scale-105 transition-all duration-300 p-4'>
-                <FaCity size={30} className='invert' />
-                <span className='font-bold text-lg text-center text-white'>
-                  Responsabilidade Social
-                </span>
-                <span className='text-center text-white'>
-                  Nosso compromisso para com a comunidade é constante,
-                  investimos constantemente em projetos sociais e zelamos pelo
-                  bem estar de todos.
-                </span>
-              </div>
+            <div className='flex xxs:flex-col md:flex-row items-center justify-center w-full gap-5 '>
+              <CardGuidance
+                icon={<FaRecycle size={30} className='invert' />}
+                title={'Sustentabilidade'}
+                text={
+                  'Entre nossas ações envolvidas estão a reutilização de materiais que seriam descartados na natureza para produção de mobília sustentável.'
+                }
+              />
+              <CardGuidance
+                icon={<FaCity size={30} className='invert' />}
+                title={'Responsabilidade Social'}
+                text={
+                  'Nosso compromisso para com a comunidade é constante, investimos constantemente em projetos sociais e zelamos pelo bem estar de todos.'
+                }
+              />
             </div>
           </div>
         </div>
