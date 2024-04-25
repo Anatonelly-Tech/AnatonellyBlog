@@ -47,16 +47,6 @@ const index = () => {
     const imgwidth = 200;
     const imgheight = 283;
 
-    /*
- 
-120 - 170 
-200 - x
-120x = 200*170
-120x = 34000
-x = 34000/120
-x = 283.3333333333333
-
- */
 
     setTimeout(init, 5000);
 
@@ -158,7 +148,7 @@ x = 283.3333333333333
     };
   }, []);
   return (
-    <div className='bodyCarousel'>
+    <div className='bodyCarousel  md:flex xxs:hidden h-[150vh] w-full  bg-neutral-800'>
       <div id='dragcontainer'>
         <div id='spincontainer'>
           {itemsCarrousel.map((item, index) => (
