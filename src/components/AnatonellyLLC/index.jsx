@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Utils
 import { cards1 } from '@/utils/cards';
@@ -16,14 +16,28 @@ import { GiAirplaneDeparture } from 'react-icons/gi'; //transporte aéreo
 import { CiBoxes } from 'react-icons/ci'; //Serviços Alfandegários:
 import { GiHarborDock } from 'react-icons/gi'; //Serviços de Logística
 
+// Utils
+import { TitleLetter, Paragraph, Lists, Img } from '@/utils/animations';
+
 const index = () => {
+  useEffect(() => {
+    async function loadReveal() {
+      const sr = (await import('scrollreveal')).default();
+
+      sr.reveal('#TitleLetter', TitleLetter);
+      sr.reveal('#Paragraph', Paragraph);
+      sr.reveal('#Lists', Lists);
+      sr.reveal('#Img', Img);
+    }
+    loadReveal();
+  }, []);
   return (
     <div
       id='AnatonellyLLC'
       className='w-full h-auto flex flex-col -z-10 bg-neutral-200 '
     >
       <span
-        id='SobreNosTexto1'
+        id='TitleLetter'
         className=' flex items-start justify-start font-black lg:text-6xl md:text-6xl sm:text-4xl xs:text-2xl xxs:xl text-start'
       >
         Anatonelly LLC
@@ -31,15 +45,15 @@ const index = () => {
       <div className='h-auto w-full bg-neutral-800 flex flex-col justify-center items-center gap-10'>
         <div className='flex flex-col justify-center items-start gap-10 p-10'>
           <span
-            id='SobreNosTexto2'
+            id='Paragraph'
             className='text-white text-xl font-bold w-auto inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
           >
-            introdução
+            Introdução
           </span>
 
           <div className='flex flex-col justify-center h-5/6 items-center gap-5'>
             <span
-              id='SobreNosTexto2'
+              id='Paragraph'
               className='text-white text-2xl text-justify font-normal w-full lg:w-1/2 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base '
             >
               Anatonelly LLC é uma empresa em ascensão no setor de transporte
@@ -54,7 +68,7 @@ const index = () => {
               conectando você aos mercados globais de maneira eficiente e segura
             </span>
             <span
-              id='SobreNosTexto2'
+              id='Paragraph'
               className='text-white text-2xl text-justify font-normal w-full lg:w-1/2 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base '
             >
               Destaques dos principais serviços oferecidos, como transporte
@@ -68,14 +82,14 @@ const index = () => {
         </div>
         <div className='flex flex-col justify-center items-center gap-5 w-full bg-neutral-100 text-black p-10'>
           <span
-            id='SobreNosTexto1'
+            id='TitleLetter'
             className='text-start text-xl font-bold inline-block w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
           >
             Nossa expertise abrange:{' '}
           </span>
           <div className='flex flex-col items-center justify-center gap-10'>
             <div
-              id='SobreNosTexto2'
+              id='Paragraph'
               className=' flex xxs:flex-col md:flex-row  items-center justify-center w-full gap-5 '
             >
               <CardGuidance
@@ -101,7 +115,7 @@ const index = () => {
               />
             </div>
             <div
-              id='SobreNosTexto2'
+              id='Paragraph'
               className='flex xxs:flex-col md:flex-row items-center justify-center w-full gap-5 '
             >
               <CardGuidance
@@ -120,7 +134,7 @@ const index = () => {
               />
             </div>
             <span
-              id='SobreNosTexto2'
+              id='Paragraph'
               className='  font-semibold w-full lg:p-16 md:gap-12 sm:gap-10 xs:gap-8 xxs:gap-6 text-justify lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base'
             >
               Na Anatonelly LLC, nossa prioridade é fornecer serviços de alta
@@ -134,12 +148,15 @@ const index = () => {
         <div className='bg-AnatonellyLLC lg:h-[91.5vh] h-auto w-full bg-cover z-20'>
           <div className='w-full h-full bg-black/80 p-10 flex flex-col items-center justify-start gap-20'>
             <span
-              id='SobreNosTexto1'
+              id='TitleLetter'
               className='text-start text-neutral-100 text-xl font-bold inline-block w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
             >
               Sobre nós:{' '}
             </span>
-            <div className='w-8/12 h-5/6 flex flex-col items-center justify-start lg:gap-20 gap-10'>
+            <div
+              id='Lists'
+              className='w-8/12 h-5/6 flex flex-col items-center justify-start lg:gap-20 gap-10'
+            >
               <p className='text-white text-sm font-semibold lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base'>
                 Informações sobre a equipe de especialistas em logística e
                 transporte da Anatonelly LLC.
@@ -165,7 +182,7 @@ const index = () => {
       <div className='w-full h-auto flex flex-col items-center justify-start bg-gradient-to-b from-white to-neutral-800 z-10 p-10 pb-36'>
         <div className='flex items-start justify-center w-full h-52'>
           <span
-            id='SobreNosTexto1'
+            id='TitleLetter'
             className='text-center text-black text-xl font-bold w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
           >
             Serviços:{' '}
@@ -176,18 +193,24 @@ const index = () => {
             alt=''
           />
         </div>
-        <div className='z-40 w-full h-auto flex items-center justify-center'>
+        <div
+          id='Lists'
+          className='z-40 w-full h-auto flex items-center justify-center'
+        >
           <Card3D cardsArray={cards1} />
         </div>
       </div>
       <div className='bg-neutral-800 w-full h-screen  flex flex-col items-center justify-around'>
         <span
-          id='SobreNosTexto1'
+          id='TitleLetter'
           className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold inline-block w-full pl-20'
         >
           Destinos:{' '}
         </span>
-        <div className='lg:w-1/2 w-3/4 h-auto flex items-center justify-center bg-neutral-200 lg:p-20 p-5 rounded-2xl shadow-2xl shadow-neutral-500'>
+        <div
+          id='Paragraph'
+          className='lg:w-1/2 w-3/4 h-auto flex items-center justify-center bg-neutral-200 lg:p-20 p-5 rounded-2xl shadow-2xl shadow-neutral-500'
+        >
           <p className='text-neutral-700 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base'>
             Na Anatonelly LLC, conectamos seus negócios aos principais destinos
             globais, facilitando o comércio internacional de e para a China e os
@@ -205,12 +228,15 @@ const index = () => {
       </div>
       <div className='bg-gradient-to-t h-screen from-neutral-200 to-neutral-800 flex flex-col items-center justify-evenly'>
         <span
-          id='SobreNosTexto1'
+          id='TitleLetter'
           className='text-start text-white font-bold inline-block w-full pl-20 lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
         >
           Recursos:{' '}
         </span>
-        <div className='w-full h-auto flex items-center justify-center '>
+        <div
+          id='Lists'
+          className='w-full h-auto flex items-center justify-center '
+        >
           <Card3D cardsArray={cards2} />
         </div>
       </div>

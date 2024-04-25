@@ -53,7 +53,7 @@ export const TitleLetter = {
   origin: 'right',
   opacity: '0',
 };
-export const paragraph = {
+export const Paragraph = {
   delay: 500,
   distance: '100%',
   origin: 'left',
