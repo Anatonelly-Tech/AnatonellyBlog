@@ -32,7 +32,7 @@ const index = () => {
   return (
     <div
       id='SobreNos'
-      className='w-full h-auto flex flex-col overflow-hidden bg-neutral-800 '
+      className='w-full h-auto flex flex-col overflow-hidden bg-neutral-800  '
     >
       <span
         id='TitleLetter'
@@ -338,7 +338,7 @@ const index = () => {
             </div>
             <div
               id='Lists'
-              className='flex xxs:flex-col md:flex-row items-center justify-center w-full gap-5 '
+              className='flex xxs:flex-col md:flex-row items-center justify-center w-full gap-5 pb-20'
             >
               <CardGuidance
                 icon={<FaRecycle size={30} className='invert' />}

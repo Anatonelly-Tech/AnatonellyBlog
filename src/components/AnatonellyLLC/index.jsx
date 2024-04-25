@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from 'react';
 
@@ -34,22 +35,26 @@ const index = () => {
   return (
     <div
       id='AnatonellyLLC'
-      className='w-full h-auto flex flex-col -z-10 bg-neutral-200 '
+      className='w-screen h-auto flex flex-col -z-10 bg-neutral-200 '
     >
-      <span
-        id='TitleLetter'
-        className=' flex items-start justify-start font-black lg:text-6xl md:text-6xl sm:text-4xl xs:text-2xl xxs:xl text-start'
-      >
-        Anatonelly LLC
-      </span>
+      <div className='w-full flex flex-col items-start'>
+        <span
+          id='TitleLetter'
+          className=' flex items-start justify-start font-black lg:text-6xl md:text-6xl sm:text-4xl xs:text-2xl xxs:xl text-start'
+        >
+          Anatonelly LLC
+        </span>
+      </div>
       <div className='h-auto w-full bg-neutral-800 flex flex-col justify-center items-center gap-10'>
         <div className='flex flex-col justify-center items-start gap-10 p-10'>
-          <span
-            id='Paragraph'
-            className='text-white text-xl font-bold w-auto inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
-          >
-            Introdução
-          </span>
+          <div className='w-full flex flex-col items-start'>
+            <span
+              id='Paragraph'
+              className='text-white text-xl font-bold inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
+            >
+              Introdução
+            </span>
+          </div>
 
           <div className='flex flex-col justify-center h-5/6 items-center gap-5'>
             <span
@@ -81,12 +86,14 @@ const index = () => {
           </div>
         </div>
         <div className='flex flex-col justify-center items-center gap-5 w-full bg-neutral-100 text-black p-10'>
-          <span
-            id='TitleLetter'
-            className='text-start text-xl font-bold inline-block w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
-          >
-            Nossa expertise abrange:{' '}
-          </span>
+          <div className='w-full flex flex-col items-start'>
+            <span
+              id='TitleLetter'
+              className='text-start text-xl font-bold inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
+            >
+              Nossa expertise abrange:{' '}
+            </span>
+          </div>
           <div className='flex flex-col items-center justify-center gap-10'>
             <div
               id='Paragraph'
@@ -147,12 +154,14 @@ const index = () => {
         </div>
         <div className='bg-AnatonellyLLC lg:h-[91.5vh] h-auto w-full bg-cover z-20'>
           <div className='w-full h-full bg-black/80 p-10 flex flex-col items-center justify-start gap-20'>
-            <span
-              id='TitleLetter'
-              className='text-start text-neutral-100 text-xl font-bold inline-block w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
-            >
-              Sobre nós:{' '}
-            </span>
+            <div className='w-full flex flex-col items-start'>
+              <span
+                id='TitleLetter'
+                className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold pl-52'
+              >
+                Sobre nós:{' '}
+              </span>
+            </div>
             <div
               id='Lists'
               className='w-8/12 h-5/6 flex flex-col items-center justify-start lg:gap-20 gap-10'
@@ -201,12 +210,14 @@ const index = () => {
         </div>
       </div>
       <div className='bg-neutral-800 w-full h-screen  flex flex-col items-center justify-around'>
-        <span
-          id='TitleLetter'
-          className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold inline-block w-full pl-20'
-        >
-          Destinos:{' '}
-        </span>
+        <div className='w-full flex flex-col items-start'>
+          <span
+            id='TitleLetter'
+            className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold pl-52'
+          >
+            Destinos:{' '}
+          </span>
+        </div>
         <div
           id='Paragraph'
           className='lg:w-1/2 w-3/4 h-auto flex items-center justify-center bg-neutral-200 lg:p-20 p-5 rounded-2xl shadow-2xl shadow-neutral-500'
@@ -226,10 +237,10 @@ const index = () => {
         </div>
         <div></div>
       </div>
-      <div className='bg-gradient-to-t h-screen from-neutral-200 to-neutral-800 flex flex-col items-center justify-evenly'>
+      <div className='bg-gradient-to-t h-screen from-neutral-200 to-neutral-800 flex flex-col items-start justify-evenly'>
         <span
           id='TitleLetter'
-          className='text-start text-white font-bold inline-block w-full pl-20 lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
+          className='text-start text-white font-bold inline-block pl-20 lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
         >
           Recursos:{' '}
         </span>
