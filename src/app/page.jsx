@@ -15,11 +15,8 @@ export default function Home() {
       <InicialScreen />
       <Navbar />
       <Carousel />
-
-      {/* SobreNos */}
       <AboutUs />
       <AnatonellyLLC />
-      {/* Footer */}
       <Footer />
     </div>
   );
