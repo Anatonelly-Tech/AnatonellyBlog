@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from 'react';
 
@@ -34,7 +35,7 @@ const index = () => {
   return (
     <div
       id='AnatonellyLLC'
-      className='w-full h-auto flex flex-col -z-10 bg-neutral-200 '
+      className='w-screen h-auto flex flex-col -z-10 bg-neutral-200 '
     >
       <div className='h-auto w-full bg-neutral-800 flex flex-col justify-center items-center gap-10'>
         <span
@@ -50,6 +51,7 @@ const index = () => {
           >
             Introdução
           </span>
+
 
           <div className='flex flex-col justify-center h-5/6 items-center gap-5'>
             <span
@@ -230,6 +232,7 @@ const index = () => {
         <span
           id='TitleLetter'
           className='text-start text-white font-bold inline-block  lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
+
         >
           Recursos:{' '}
         </span>
