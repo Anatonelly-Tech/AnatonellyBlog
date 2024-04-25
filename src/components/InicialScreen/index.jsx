@@ -2,47 +2,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from 'react';
 
+// Utils
+import { Logo1, Logo2, Logo3, Logo4, LogoBottom, LogoTop } from '@/utils/animations';
+
 const index = () => {
-  var LogoTop = {
-    delay: 300,
-    durantion: 2000,
-    distance: '50%',
-    origin: 'top',
-    opacity: '0',
-    scale: '3',
-  };
-  var LogoBottom = {
-    delay: 300,
-    durantion: 2000,
-    distance: '50%',
-    origin: 'bottom',
-    opacity: '0',
-    scale: '3',
-  };
-  var Logo1 = {
-    delay: 700,
-    durantion: 2000,
-    opacity: '0',
-    scale: '3',
-  };
-  var Logo2 = {
-    delay: 800,
-    durantion: 2000,
-    opacity: '0',
-    scale: '3',
-  };
-  var Logo3 = {
-    delay: 900,
-    durantion: 2000,
-    opacity: '0',
-    scale: '3',
-  };
-  var Logo4 = {
-    delay: 1000,
-    durantion: 2000,
-    opacity: '0',
-    scale: '3',
-  };
+
 
   useEffect(() => {
     async function loadReveal() {

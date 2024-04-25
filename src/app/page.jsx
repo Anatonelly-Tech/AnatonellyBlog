@@ -1,5 +1,7 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
+// Components
 import Carousel from '@/components/Carousel';
 import InicialScreen from '@/components/InicialScreen';
 import Navbar from '@/components/Navbar';
@@ -9,17 +11,13 @@ import AnatonellyLLC from '@/components/AnatonellyLLC';
 
 export default function Home() {
   return (
-    <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50'>
+    <div className='min-h-screen h-auto w-full flex flex-col items-center justify-start relative bg-neutral-200 -z-50'>
       <InicialScreen />
       <Navbar />
       <Carousel />
-      <div className='flex flex-col gap-96'>
-        {/* SobreNos */}
-        <AboutUs />
-        <AnatonellyLLC />
-        {/* Footer */}
-        <Footer />
-      </div>
+      <AboutUs />
+      <AnatonellyLLC />
+      <Footer />
     </div>
   );
 }

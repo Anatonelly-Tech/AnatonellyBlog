@@ -1,41 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+
+//Styles
 import './style.css';
 
-const itemsCarrousel = [
-  {
-    imagem: '/Carousel/img1.jpg',
-  },
-  {
-    imagem: '/Carousel/img2.jpg',
-  },
-  {
-    imagem: '/Carousel/img3.jpg',
-  },
-  {
-    imagem: '/Carousel/img4.jpg',
-  },
-  {
-    imagem: '/Carousel/img5.jpg',
-  },
-  {
-    imagem: '/Carousel/img6.jpg',
-  },
-  {
-    imagem: '/Carousel/img7.jpg',
-  },
-  {
-    imagem: '/Carousel/img8.heic',
-  },
-  {
-    imagem: '/Carousel/img9.heic',
-  },
-  {
-    imagem: '/Carousel/img10.heic',
-  },
-];
+// Utils
+import itensCarousel from '@/utils/itensCarousel';
 
 const index = () => {
   useEffect(() => {
@@ -46,7 +18,6 @@ const index = () => {
     const rotatespeed = -60;
     const imgwidth = 200;
     const imgheight = 283;
-
 
     setTimeout(init, 5000);
 
@@ -151,7 +122,7 @@ const index = () => {
     <div className='bodyCarousel  md:flex xxs:hidden h-[150vh] w-full  bg-neutral-800'>
       <div id='dragcontainer'>
         <div id='spincontainer'>
-          {itemsCarrousel.map((item, index) => (
+          {itensCarousel.map((item, index) => (
             <img id='img' key={index} src={item.imagem} alt='' />
           ))}
 

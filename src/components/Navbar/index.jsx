@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { a } from 'react-scroll';
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
