@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 
 const index = ({ icon, title, text }) => {

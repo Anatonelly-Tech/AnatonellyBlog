@@ -26,6 +26,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         truckInicial: "url('/InicialScreen/BgCaminhao.png')",
         AboutUs: "url('/AboutUs/BgNossosNumeros.png')",
+        AnatonellyLLC: "url('/AnatonellyLLC/aboutUsLLC.jpg')",
       },
       fontWeight: {
         hairline: 100,
