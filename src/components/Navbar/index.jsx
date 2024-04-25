@@ -72,7 +72,7 @@ const Navbar = () => {
   return (
     <div
       id='navbar'
-      className='flex flex-col top-0 sticky items-start z-50  w-full h-20  bg-neutral-800 shadow-md shadow-black/25 justify-center'
+      className='md:flex xxs:hidden flex-col top-0 sticky items-start z-50  w-full h-20  bg-neutral-800 shadow-md shadow-black/25 justify-center'
     >
       <div className='flex items-center w-full h-full gap-24 px-16'>
         {selected == 'SobreNos' ? (

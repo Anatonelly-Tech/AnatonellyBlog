@@ -7,6 +7,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        Anatonelly: {
+          100: '#9c83f2',
+          200: '#785ed1',
+          300: '#583ead',
+          400: '#422a91',
+          500: '#2e1973',
+          600: '#1c0b57',
+          700: '#11043d',
+          800: '#0c0035',
+          900: '#050017',
+        },
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
