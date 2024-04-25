@@ -1,16 +1,17 @@
-'use client';
 import React, { useState, useEffect } from 'react';
-
+import { RxHamburgerMenu } from 'react-icons/rx';
+import './style.css';
 const Navbar = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [widthNavbar, setWidthNavbar] = useState('0');
   const [selected, setSelected] = useState('SobreNos');
   const [navbarHeight, setNavbarHeight] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const navbar = document.getElementById('navbar');
     if (navbar) {
       setNavbarHeight(navbar.offsetHeight);
+
     }
   }, []);
 
@@ -22,173 +23,135 @@ const Navbar = () => {
   }, []);
 
   const handleNavigation = (sectionId) => {
-    console.log('navegou');
     setSelected(sectionId);
     const section = document.getElementById(sectionId);
     if (section) {
       const offsetTop =
-        section.offsetTop - navbarHeight - (sectionId === SobreNos ? 20 : 0);
+        section.offsetTop - navbarHeight - (sectionId === 'SobreNos' ? 20 : 0);
 
       window.scrollTo({
         top: offsetTop,
-        behavior: '',
+        behavior: 'smooth',
       });
     }
   };
 
   const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-
-    switch (true) {
-      case position <= 600:
-        setSelected('SobreNos');
-        setWidthNavbar('w-0');
-        break;
-      case position > 600 && position < 4500:
-        setSelected('SobreNos');
-        setWidthNavbar('w-[10%]');
-        break;
-      // case position > 1200 && position < 1800:
-      //   setSelected('AnatonellyTransportes');
-      //   setWidthNavbar('w-2/5');
-      //   break;
-      // case position > 1800 && position < 2400:
-      //   setSelected('AnatonellyTech');
-      //   setWidthNavbar('w-3/5');
-      //   break;
-      // case position > 2400 && position < 3000:
-      //   setSelected('GlobalTransportes');
-      //   setWidthNavbar('w-4/5');
-      //   break;
-      default:
-        setWidthNavbar('w-full');
-
-        break;
-    }
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const number = Math.trunc(scrolled);
+    console.log(number);
+    document.getElementById('loadingNav').style.width = `${number}%`;
+    for (let i = 0; i < 100; i++) {}
+  };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <div
       id='navbar'
-      className='md:flex xxs:hidden flex-col top-0 sticky items-start z-50  w-full h-20  bg-neutral-800 shadow-md shadow-black/25 justify-center'
+      className={`md:flex flex flex-col md:items-start items-end xxs:justify-between md:w-full md:p-0 px-1 w-auto h-auto bg-neutral-700 shadow-md shadow-black/25 sticky md:top-0 top-3 right-3 z-50 md:rounded-none rounded-md transition-all duration-300`}
     >
-      <div className='flex items-center w-full h-full gap-24 px-16'>
-        {selected == 'SobreNos' ? (
-          <a
-            className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between'
-            onClick={() => handleNavigation('SobreNos')}
-          >
-            <div className='h-1'></div>
-            <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
-              Sobre nós
-            </span>
-
-            <div className=' flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </a>
-        ) : (
-          <a
-            onClick={() => handleNavigation('SobreNos')}
-            className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
-          >
-            <span className='text-white select-none px-2 text-lg font-bold'>
-              Sobre nós
-            </span>
-          </a>
-        )}
-        {selected == 'AnatonellyLLC' ? (
-          <a
-            className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
-            onClick={() => handleNavigation('AnatonellyLLC')}
-          >
-            <div className='h-1'></div>
-            <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
-              Anatonelly LLC
-            </span>
-
-            <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </a>
-        ) : (
-          <a
-            onClick={() => handleNavigation('AnatonellyLLC')}
-            className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
-          >
-            <span className='text-white select-none px-2 text-lg font-bold'>
-              Anatonelly LLC
-            </span>
-          </a>
-        )}
-        {selected == 'AnatonellyTransportes' ? (
-          <a
-            onClick={() => handleNavigation('AnatonellyTransportes')}
-            className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
-          >
-            <div className='h-1'></div>
-            <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
-              Anatonelly Transportes
-            </span>
-
-            <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </a>
-        ) : (
-          <a
-            onClick={() => handleNavigation('AnatonellyTransportes')}
-            className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
-          >
-            <span className='text-white select-none px-2 text-lg font-bold'>
-              Anatonelly Transportes
-            </span>
-          </a>
-        )}
-        {selected == 'AnatonellyTech' ? (
-          <a
-            onClick={() => handleNavigation('AnatonellyTech')}
-            className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
-          >
-            <div className='h-1'></div>
-            <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
-              Anatonelly Tech
-            </span>
-
-            <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </a>
-        ) : (
-          <a
-            onClick={() => handleNavigation('AnatonellyTech')}
-            className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
-          >
-            <span className='text-white select-none px-2 text-lg font-bold'>
-              Anatonelly Tech
-            </span>
-          </a>
-        )}
-        {selected == 'GlobalTransportes' ? (
-          <a
-            onClick={() => handleNavigation('GlobalTransportes')}
-            className='flex flex-col w-auto h-full items-center  bg-gradient-to-b from-neutral-800 to-neutral-700 from-70% rounded-tr-2xl justify-between transition-all'
-          >
-            <div className='h-1'></div>
-            <span className='text-white select-none px-2 text-lg font-extrabold bg-gradient-to-b from-neutral-900 to-60% to-white bg-clip-text text-transparent'>
-              Global Transportes
-            </span>
-
-            <div className='flex w-full h-1 justify-end items-center bg-neutral-200'></div>
-          </a>
-        ) : (
-          <a
-            onClick={() => handleNavigation('GlobalTransportes')}
-            className='flex flex-col w-auto h-full items-center hover:bg-neutral-700  justify-center gap-7'
-          >
-            <span className='text-white select-none px-2 text-lg font-bold'>
-              Global Transportes
-            </span>
-          </a>
-        )}
-      </div>
+      <div className='md:flex hidden h-[10px]'></div>
+      <div className='md:flex hidden'></div>
       <div
-        className={`h-[3px] relative transition-width duration-1000 ${widthNavbar}`}
+        className={
+          'md:hidden w-10 h-10 cursor-pointer flex flex-col items-center justify-center gap-1 relative '
+        }
+        onClick={toggleMenu}
       >
-        <div className='bg-cyan-500 w-full h-full'></div>
+        <div
+          className={`w-6 h-0.5 bg-white transition-all ${
+            isMenuOpen ? 'rotate-45 translate-y-2' : ''
+          }`}
+        ></div>
+        <div
+          className={`w-6 h-0.5 bg-white transition-all ${
+            isMenuOpen ? 'opacity-0' : ''
+          }`}
+        ></div>
+        <div
+          className={`w-6 h-0.5 bg-white transition-all ${
+            isMenuOpen ? '-rotate-45 -translate-y-2' : ''
+          }`}
+        ></div>
+      </div>
+      {/* Lista de itens da navegação */}
+      <ul
+        className={`md:flex bg-neutral-700 w-auto ${
+          isMenuOpen ? 'flex flex-col items-center' : 'hidden'
+        }`}
+      >
+        <li>
+          <a
+            className={`block py-2 px-4 ${
+              selected === 'SobreNos' ? 'text-white font-bold' : 'text-gray-300'
+            }`}
+            onClick={() => handleNavigation('SobreNos')}
+          >
+            Sobre nós
+          </a>
+        </li>
+        <li>
+          <a
+            className={`block py-2 px-4 ${
+              selected === 'AnatonellyLLC'
+                ? 'text-white font-bold'
+                : 'text-gray-300'
+            }`}
+            onClick={() => handleNavigation('AnatonellyLLC')}
+          >
+            Anatonelly LLC
+          </a>
+        </li>
+        <li>
+          <a
+            className={`block py-2 px-4 ${
+              selected === 'AnatonellyTransportes'
+                ? 'text-white font-bold'
+                : 'text-gray-300'
+            }`}
+            onClick={() => handleNavigation('AnatonellyTransportes')}
+          >
+            Anatonelly Transportes
+          </a>
+        </li>
+        <li>
+          <a
+            className={`block py-2 px-4 ${
+              selected === 'AnatonellyTech'
+                ? 'text-white font-bold'
+                : 'text-gray-300'
+            }`}
+            onClick={() => handleNavigation('AnatonellyTech')}
+          >
+            Anatonelly Tech
+          </a>
+        </li>
+        <li>
+          <a
+            className={`block py-2 px-4 ${
+              selected === 'GlobalTransportes'
+                ? 'text-white font-bold'
+                : 'text-gray-300'
+            }`}
+            onClick={() => handleNavigation('GlobalTransportes')}
+          >
+            Global Transportes
+          </a>
+        </li>
+      </ul>
+      {/* Barra de progresso */}
+      <div
+        id='loadingNav'
+        className={`h-[3px] relative transition-width duration-1000 `}
+      >
+        <div className='bg-cyan-500 w-full h-[3px] md:flex hidden'></div>
       </div>
     </div>
   );
