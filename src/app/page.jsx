@@ -1,5 +1,7 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
+// Components
 import Carousel from '@/components/Carousel';
 import InicialScreen from '@/components/InicialScreen';
 import Navbar from '@/components/Navbar';
