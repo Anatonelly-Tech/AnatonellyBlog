@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import CardContent from '@mui/material/CardContent';
@@ -7,16 +7,35 @@ import Card from 'react-animated-3d-card';
 
 const Card3D = ({ cardsArray }) => {
   return (
-    <Box>
+    <Box
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <Grid
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
         container
-        justifyContent='space-around'
-        alignItems='center'
-        spacing={{ xs: 2, md: 4 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
+        spacing={2}
       >
         {cardsArray.map((item) => (
-          <Grid item xs={2} sm={4} md={4} key={item.title}>
+          <Grid
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            key={item.title}
+          >
             <Card
               style={{
                 width: '200px',

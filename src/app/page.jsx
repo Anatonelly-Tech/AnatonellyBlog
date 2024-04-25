@@ -9,17 +9,16 @@ import AnatonellyLLC from '@/components/AnatonellyLLC';
 
 export default function Home() {
   return (
-    <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50'>
+    <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50 flex flex-col items-center justify-start overflow-x-hidden '>
       <InicialScreen />
       <Navbar />
       <Carousel />
-      <div className='flex flex-col gap-96'>
-        {/* SobreNos */}
-        <AboutUs />
-        <AnatonellyLLC />
-        {/* Footer */}
-        <Footer />
-      </div>
+
+      {/* SobreNos */}
+      <AboutUs />
+      <AnatonellyLLC />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
