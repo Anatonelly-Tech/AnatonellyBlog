@@ -9,13 +9,13 @@ import AnatonellyLLC from '@/components/AnatonellyLLC';
 
 export default function Home() {
   return (
-    <div className='min-h-screen h-auto w-full'>
+    <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50'>
       <InicialScreen />
       <Navbar />
       <div className='h-screen bg-neutral-800'>
         <Carousel />
       </div>
-      <div className='flex flex-col gap-96'>
+      <div className='relative flex flex-col gap-96 -z-10'>
         {/* SobreNos */}
         <AboutUs />
         <AnatonellyLLC />

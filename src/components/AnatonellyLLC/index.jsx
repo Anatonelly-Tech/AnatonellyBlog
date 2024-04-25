@@ -2,7 +2,7 @@
 import React from 'react';
 
 import CardGuidance from '@/components/CardGuidance';
-
+import Card3D from '@/components/Card3D';
 import { FaTruck } from 'react-icons/fa'; //transporte terrestre
 import { GiCargoShip } from 'react-icons/gi'; //transporte maritimo
 import { GiAirplaneDeparture } from 'react-icons/gi'; //transporte aéreo
@@ -10,10 +10,42 @@ import { CiBoxes } from 'react-icons/ci'; //Serviços Alfandegários:
 import { GiHarborDock } from 'react-icons/gi'; //Serviços de Logística
 
 const index = () => {
+  const cards1 = [
+    {
+      title: 'Oferecemos',
+      text: 'Ampla gama de serviços de importação e exportação para atender às necessidades globais de nossos clientes. ',
+    },
+    {
+      title: 'Expertise ',
+      text: 'Transporte terrestre, marítimo e aéreo, garantimos soluções eficientes e confiáveis para movimentar sua carga em escala internacional, seja qual for o destino.',
+    },
+    {
+      title: 'Nossos serviços ',
+      text: 'Incluem assistência completa em desembaraço aduaneiro, assegurando a conformidade com as regulamentações alfandegárias em todo o mundo. ',
+    },
+    {
+      title: 'Nossa equipe ',
+      text: 'Fornece consultoria especializada em regulamentações internacionais de comércio, oferecendo orientação estratégica para garantir o sucesso de suas operações globais. ',
+    },
+    {
+      title: 'Confie na Anatonelly LLC ',
+      text: 'Para simplificar o processo de importação e exportação, enquanto você se concentra em expandir seus negócios além das fronteiras.',
+    },
+  ];
+  const cards2 = [
+    {
+      title: 'Auxiliar os clientes',
+      text: ' FAQs detalhadas para ajudar os clientes a entender os processos de transporte internacional e regulamentações alfandegárias.',
+    },
+    {
+      title: 'Tecnologia de ponta',
+      text: ' Mapas interativos mostrando rotas de transporte e localização de hubs logísticos estratégicos.',
+    },
+  ];
   return (
     <div
       id='AnatonellyLLC'
-      className='w-full h-auto flex flex-col overflow-x-hidden gap-5'
+      className='w-full h-auto flex flex-col overflow-x-hidden -z-20 overflow-hidden bg-neutral-200'
     >
       <span id='SobreNosTexto1' className='  text-8xl px-14 font-black  '>
         Anatonelly LLC
@@ -121,7 +153,7 @@ const index = () => {
             </span>
           </div>
         </div>
-        <div className='bg-AnatonellyLLC h-[91.5vh] w-full bg-cover'>
+        <div className='bg-AnatonellyLLC h-[91.5vh] w-full bg-cover z-20'>
           <div className='w-full h-full bg-black/80 p-10 flex flex-col items-center justify-start'>
             <span
               id='SobreNosTexto1'
@@ -150,6 +182,58 @@ const index = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className='w-full h-screen flex flex-col items-center justify-start bg-gradient-to-b from-white to-neutral-800 z-10 p-10 pb-36'>
+        <div className='flex items-start justify-center w-full h-52'>
+          <span
+            id='SobreNosTexto1'
+            className='text-start text-black text-5xl font-bold inline-block w-full '
+          >
+            Serviços:{' '}
+          </span>
+          <img
+            className='relative -top-48 z-10 -right-52 '
+            src='/AnatonellyLLC/objectAnatonellyLLC.png'
+            alt=''
+          />
+        </div>
+        <div className='z-40 w-full h-auto flex items-center justify-center'>
+          <Card3D cardsArray={cards1} />
+        </div>
+      </div>
+      <div className='bg-neutral-800 w-full h-screen  flex flex-col items-center justify-around'>
+        <span
+          id='SobreNosTexto1'
+          className='text-start text-white text-5xl font-bold inline-block w-full pl-20'
+        >
+          Destinos:{' '}
+        </span>
+        <div className='w-1/2 h-auto flex items-center justify-center bg-neutral-200 p-20 rounded-2xl shadow-2xl shadow-neutral-500'>
+          <p className='text-neutral-700 text-xl'>
+            Na Anatonelly LLC, conectamos seus negócios aos principais destinos
+            globais, facilitando o comércio internacional de e para a China e os
+            Estados Unidos. Com nossa expertise em transporte terrestre,
+            marítimo e aéreo, atendemos às demandas logísticas desses
+            mercados-chave, garantindo entregas rápidas e eficientes. Seja
+            importando componentes vitais da indústria chinesa ou exportando
+            produtos de alta qualidade para os consumidores americanos, estamos
+            aqui para tornar o processo simples e sem complicações. Confie na
+            Anatonelly LLC para expandir seus horizontes comerciais e alcançar
+            sucesso em escala global.
+          </p>
+        </div>
+        <div></div>
+      </div>
+      <div className='bg-gradient-to-t h-screen from-neutral-200 to-neutral-800 flex flex-col items-center justify-evenly'>
+        <span
+          id='SobreNosTexto1'
+          className='text-start text-white text-5xl font-bold inline-block w-full pl-20'
+        >
+          Recursos:{' '}
+        </span>
+        <div className='w-full h-auto flex items-center justify-center '>
+          <Card3D cardsArray={cards2} />
         </div>
       </div>
     </div>
