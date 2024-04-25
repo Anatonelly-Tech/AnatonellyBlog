@@ -18,7 +18,6 @@ export default function Home() {
       {/* SobreNos */}
       <AboutUs />
       <AnatonellyLLC />
-      {/* Footer */}
       <Footer />
     </div>
   );

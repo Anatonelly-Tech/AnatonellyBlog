@@ -14,17 +14,17 @@ import { FaRecycle } from 'react-icons/fa';
 import { FaCity } from 'react-icons/fa6';
 
 // Utils
-import { TitleLetter, paragraph, Lists, Img } from '@/utils/animations';
+import { TitleLetter, Paragraph, Lists, Img } from '@/utils/animations';
 
 const index = () => {
   useEffect(() => {
     async function loadReveal() {
       const sr = (await import('scrollreveal')).default();
 
-      sr.reveal('#SobreNosTexto1', TitleLetter);
-      sr.reveal('#SobreNosTexto2', paragraph);
-      sr.reveal('#SobreNosTexto3', Lists);
-      sr.reveal('#SobreNosImg', Img);
+      sr.reveal('#TitleLetter', TitleLetter);
+      sr.reveal('#Paragraph', Paragraph);
+      sr.reveal('#Lists', Lists);
+      sr.reveal('#Img', Img);
     }
     loadReveal();
   }, []);
@@ -32,10 +32,10 @@ const index = () => {
   return (
     <div
       id='SobreNos'
-      className='w-full h-auto flex flex-col overflow-x-hidden bg-neutral-800 '
+      className='w-full h-auto flex flex-col overflow-hidden bg-neutral-800 '
     >
       <span
-        id='SobreNosTexto1'
+        id='TitleLetter'
         className=' md:text-8xl xxs:text-3xl md:px-14 xxs:pt-10 md:pt-0 xxs:text-center md:text-start font-black text-white '
       >
         Sobre nós
@@ -43,14 +43,14 @@ const index = () => {
       <div className='md:h-screen xxs:h-auto w-full flex justify-center items-center p-5'>
         <div className='flex flex-col justify-center items-start gap-10'>
           <span
-            id='SobreNosTexto2'
+            id='Paragraph'
             className='text-white md:text-5xl xxs:text-xl font-bold w-auto inline-block	'
           >
             Nossa História
           </span>
 
           <div
-            id='SobreNosTexto2'
+            id='Paragraph'
             className='flex flex-col justify-center items-center'
           >
             <span className='text-white md:text-2xl xxs:text-base font-normal w-1/2 '>
@@ -67,15 +67,12 @@ const index = () => {
 
       <div className='md:h-screen xxs:h-auto w-full flex  bg-neutral-200 pt-10 xxs:pb-10 md:pb-0 gap-6'>
         <div className='flex flex-col md:w-2/3 xxs:w-full items-center justify-center gap-5'>
-          <span
-            id='SobreNosTexto1'
-            className='md:text-5xl xxs:text-xl font-bold'
-          >
+          <span id='TitleLetter' className='md:text-5xl xxs:text-xl font-bold'>
             Como Surgiu?
           </span>
 
           <p
-            id='SobreNosTexto2'
+            id='Paragraph'
             className='md:text-2xl xxs:text-base font-normal w-2/3'
           >
             O Insight para nossa mudança veio ao assistir um filme chamado
@@ -84,22 +81,16 @@ const index = () => {
           </p>
 
           <div>
-            <p
-              id='SobreNosTexto2'
-              className='md:text-2xl xxs:text-base font-normal'
-            >
+            <p id='Paragraph' className='md:text-2xl xxs:text-base font-normal'>
               - Viu a necessidade?
             </p>
-            <p
-              id='SobreNosTexto2'
-              className='md:text-2xl xxs:text-base font-normal'
-            >
+            <p id='Paragraph' className='md:text-2xl xxs:text-base font-normal'>
               - Atenda!
             </p>
           </div>
 
           <p
-            id='SobreNosTexto2'
+            id='Paragraph'
             className='md:text-2xl xxs:text-base font-normal w-2/3'
           >
             Deste modo foi criada a Global Transportes Logística Inteligente e
@@ -108,7 +99,7 @@ const index = () => {
           </p>
         </div>
         <div
-          id='SobreNosImg'
+          id='Img'
           className='md:flex xxs:hidden flex-col justify-end items-end w-1/3 '
         >
           <img
@@ -120,14 +111,14 @@ const index = () => {
       </div>
       <div className='h-screen w-full bg-AboutUs bg-cover flex justify-center flex-col md:gap-32 xxs:gap-10 p-6'>
         <span
-          id='SobreNosTexto1'
+          id='TitleLetter'
           className='md:text-5xl xxs:text-xl  px-14 font-black text-white'
         >
-          Nossos Numeros
+          Nossos Números
         </span>
         <div className='flex items-center justify-center'>
           <div className='flex flex-col gap-5 items-center justify-center'>
-            <div id='SobreNosTexto3' className='flex w-full gap-5'>
+            <div id='Lists' className='flex w-full gap-5'>
               <img
                 src='/AboutUs/CheckAboutUs.svg'
                 className='md:w-auto xxs:w-5'
@@ -137,7 +128,7 @@ const index = () => {
                 Mais de 600 transportadoras parceiras
               </p>
             </div>
-            <div id='SobreNosTexto3' className='flex w-full gap-5'>
+            <div id='Lists' className='flex w-full gap-5'>
               <img
                 src='/AboutUs/CheckAboutUs.svg'
                 className='md:w-auto xxs:w-5'
@@ -147,7 +138,7 @@ const index = () => {
                 Mais de 95 milhões em cargas transportadas
               </p>
             </div>
-            <div id='SobreNosTexto3' className='flex w-full gap-5'>
+            <div id='Lists' className='flex w-full gap-5'>
               <img
                 src='/AboutUs/CheckAboutUs.svg'
                 className='md:w-auto xxs:w-5'
@@ -157,7 +148,7 @@ const index = () => {
                 18.000 clientes atendidos direta ou indiretamente
               </p>
             </div>
-            <div id='SobreNosTexto3' className='flex w-full gap-5'>
+            <div id='Lists' className='flex w-full gap-5'>
               <img
                 src='/AboutUs/CheckAboutUs.svg'
                 className='md:w-auto xxs:w-5'
@@ -172,7 +163,7 @@ const index = () => {
       </div>
       <div className='h-screen w-full flex flex-col justify-center items-center gap-10 p-5'>
         <span
-          id='SobreNosTexto3'
+          id='Lists'
           className='text-white md:text-5xl xxs:text-xl font-bold'
         >
           Nossos Diferenciais
@@ -180,31 +171,31 @@ const index = () => {
         <div className='flex md:flex-row xxs:flex-col w-full justify-center md:items-center xxs:items-start md:gap-52 '>
           <div className='flex flex-col '>
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal text-wrap w-full'
             >
               Sistema de Frota Virtual e Frete 2.0
             </li>{' '}
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               Gestão da frota
             </li>
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               Redução de custos
             </li>{' '}
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               Aumento da perfomance
             </li>{' '}
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               + 24 transportadoras
@@ -212,31 +203,31 @@ const index = () => {
           </div>
           <div className='flex flex-col'>
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               Cursos para caminhoneiros
             </li>
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               Cashback
             </li>
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               Carga seca
             </li>
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               Material biológico
             </li>
             <li
-              id='SobreNosTexto3'
+              id='Lists'
               className='text-white md:text-2xl xxs:text-base font-normal'
             >
               + 12 mil caminhões
@@ -246,20 +237,17 @@ const index = () => {
       </div>
       <div className='h-auto w-full bg-neutral-200 flex justify-center items-center flex-col gap-32 p-6 pt-20'>
         <span
-          id='SobreNosTexto1'
+          id='TitleLetter'
           className='md:text-5xl xxs:text-xl font-black md:text-start xxs:text-center '
         >
           Orientação Estratégica
         </span>
         <div className='flex flex-col gap-10 items-center justify-center'>
           <div className='flex flex-col gap-5 items-center justify-center'>
-            <span
-              id='SobreNosTexto3'
-              className='md:text-4xl xxs:text-lg font-bold'
-            >
+            <span id='Lists' className='md:text-4xl xxs:text-lg font-bold'>
               Missão
             </span>
-            <div className='flex flex-col items-center gap-4  '>
+            <div className='flex flex-col items-center gap-4' id='Paragraph'>
               <span className='md:w-1/2 xxs:w-full md:text-lg xxs:text-sm text-center '>
                 A empresa tem como objetivo primordial otimizar toda a cadeia de
                 suprimentos, desde a coleta e armazenamento até a distribuição
@@ -277,10 +265,7 @@ const index = () => {
         </div>
 
         <div className='flex flex-col gap-5 items-center justify-center'>
-          <span
-            id='SobreNosTexto3'
-            className='md:text-4xl xxs:text-lg font-bold'
-          >
+          <span id='Lists' className='md:text-4xl xxs:text-lg font-bold'>
             Visão
           </span>
           <div className='flex'>
@@ -288,8 +273,12 @@ const index = () => {
               src='/AboutUs/OrientacaoEstrategica.png'
               className='xxs:hidden md:flex w-1/3 h-80 object-contain'
               alt=''
+              id='Img'
             />
-            <div className='flex flex-col  justify-center w-full gap-5 '>
+            <div
+              className='flex flex-col  justify-center w-full gap-5 '
+              id='Paragraph'
+            >
               <span className='md:text-lg xxs:text-sm '>
                 Liderar a revolução da logística inteligente, redefinindo a
                 forma como as pessoas e mercadorias são conectadas globalmente.
@@ -314,15 +303,15 @@ const index = () => {
         </div>
 
         <div className='flex flex-col gap-5 items-center justify-center'>
-          <span
-            id='SobreNosTexto3'
-            className='md:text-4xl xxs:text-lg font-bold'
-          >
+          <span id='Lists' className='md:text-4xl xxs:text-lg font-bold'>
             Valores
           </span>
-          <span>O que move nossa empresa é você!</span>
+          <span id='Paragraph'>O que move nossa empresa é você!</span>
           <div className='flex flex-col md:gap-10 xxs:gap-5 items-center justify-center'>
-            <div className='flex xxs:flex-col md:flex-row  items-center justify-center w-full gap-5 '>
+            <div
+              id='Lists'
+              className='flex xxs:flex-col md:flex-row  items-center justify-center w-full gap-5 '
+            >
               <CardGuidance
                 icon={<FaHandshake size={30} className='invert' />}
                 title={'Compromisso'}
@@ -347,7 +336,10 @@ const index = () => {
                 }
               />
             </div>
-            <div className='flex xxs:flex-col md:flex-row items-center justify-center w-full gap-5 '>
+            <div
+              id='Lists'
+              className='flex xxs:flex-col md:flex-row items-center justify-center w-full gap-5 '
+            >
               <CardGuidance
                 icon={<FaRecycle size={30} className='invert' />}
                 title={'Sustentabilidade'}
