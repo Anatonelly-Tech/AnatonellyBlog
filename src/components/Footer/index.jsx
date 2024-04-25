@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
+// Icons
 import { FaMapPin, FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 

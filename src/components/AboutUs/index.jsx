@@ -13,33 +13,10 @@ import { HiUserGroup } from 'react-icons/hi';
 import { FaRecycle } from 'react-icons/fa';
 import { FaCity } from 'react-icons/fa6';
 
+// Utils
+import { TitleLetter, paragraph, Lists, Img } from '@/utils/animations';
+
 const index = () => {
-  var Img = {
-    delay: 2000,
-    distance: '100%',
-    origin: 'bottom',
-    opacity: '0',
-    scale: '3',
-  };
-  var TitleLetter = {
-    delay: 500,
-    duration: 2000,
-    distance: '100%',
-    origin: 'right',
-    opacity: '0',
-  };
-  var paragraph = {
-    delay: 500,
-    distance: '100%',
-    origin: 'left',
-    opacity: '0',
-  };
-  var Lists = {
-    delay: 500,
-    distance: '50%',
-    origin: 'bottom',
-    opacity: '0',
-  };
   useEffect(() => {
     async function loadReveal() {
       const sr = (await import('scrollreveal')).default();
