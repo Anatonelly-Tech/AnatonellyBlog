@@ -36,17 +36,17 @@ const index = () => {
       id='AnatonellyLLC'
       className='w-full h-auto flex flex-col -z-10 bg-neutral-200 '
     >
-      <span
-        id='TitleLetter'
-        className=' flex items-start justify-start font-black lg:text-6xl md:text-6xl sm:text-4xl xs:text-2xl xxs:xl text-start'
-      >
-        Anatonelly LLC
-      </span>
       <div className='h-auto w-full bg-neutral-800 flex flex-col justify-center items-center gap-10'>
+        <span
+          id='TitleLetter'
+          className=' md:text-8xl xxs:text-3xl md:px-14 pt-10  xxs:text-center md:text-start font-black text-white '
+        >
+          Anatonelly LLC
+        </span>
         <div className='flex flex-col justify-center items-start gap-10 p-10'>
           <span
             id='Paragraph'
-            className='text-white text-xl font-bold w-auto inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
+            className='text-white text-xl font-bold  inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
           >
             Introdução
           </span>
@@ -83,7 +83,7 @@ const index = () => {
         <div className='flex flex-col justify-center items-center gap-5 w-full bg-neutral-100 text-black p-10'>
           <span
             id='TitleLetter'
-            className='text-start text-xl font-bold inline-block w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
+            className='text-start text-xl font-bold inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
           >
             Nossa expertise abrange:{' '}
           </span>
@@ -149,7 +149,7 @@ const index = () => {
           <div className='w-full h-full bg-black/80 p-10 flex flex-col items-center justify-start gap-20'>
             <span
               id='TitleLetter'
-              className='text-start text-neutral-100 text-xl font-bold inline-block w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
+              className='text-start text-neutral-100 text-xl font-bold inline-block  lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
             >
               Sobre nós:{' '}
             </span>
@@ -183,7 +183,7 @@ const index = () => {
         <div className='flex items-start justify-center w-full h-52'>
           <span
             id='TitleLetter'
-            className='text-center text-black text-xl font-bold w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
+            className='text-center text-black text-xl font-bold lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
           >
             Serviços:{' '}
           </span>
@@ -203,7 +203,7 @@ const index = () => {
       <div className='bg-neutral-800 w-full h-screen  flex flex-col items-center justify-around'>
         <span
           id='TitleLetter'
-          className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold inline-block w-full pl-20'
+          className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold inline-block  pl-20'
         >
           Destinos:{' '}
         </span>
@@ -226,10 +226,10 @@ const index = () => {
         </div>
         <div></div>
       </div>
-      <div className='bg-gradient-to-t h-screen from-neutral-200 to-neutral-800 flex flex-col items-center justify-evenly'>
+      <div className='bg-gradient-to-t w-full h-screen from-neutral-200 to-neutral-800 flex flex-col items-center justify-evenly'>
         <span
           id='TitleLetter'
-          className='text-start text-white font-bold inline-block w-full pl-20 lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
+          className='text-start text-white font-bold inline-block  lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
         >
           Recursos:{' '}
         </span>
