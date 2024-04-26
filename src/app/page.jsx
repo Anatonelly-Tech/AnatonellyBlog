@@ -11,10 +11,11 @@ import AnatonellyLLC from '@/components/AnatonellyLLC';
 
 export default function Home() {
   return (
-    <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50 flex flex-col items-center justify-start '>
+    <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50 flex flex-col items-end justify-start '>
       <InicialScreen />
       <Navbar />
       <Carousel />
+      {/* SobreNos */}
       <AboutUs />
       <AnatonellyLLC />
       <Footer />
