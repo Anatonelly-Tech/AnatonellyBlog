@@ -1,4 +1,4 @@
-#container {
+#introduction {
   display: flex;
   height: 100%;
   width: 100%;
@@ -7,7 +7,7 @@
   align-items: center;
   overflow: hidden;
 }
-#container.columns {
+#introduction.columns {
   align-content: stretch;
   align-items: stretch;
 }
@@ -23,7 +23,7 @@
   padding: 2px 6px;
 }
 
-#container.columns .letter {
+#introduction.columns .letter {
   flex-basis: 25%;
 }
 .for,
@@ -41,8 +41,8 @@
   font-weight: 600;
   display: none;
 }
-#container.final .for,
-#container.final .anatonelly {
+#introduction.final .for,
+#introduction.final .anatonelly {
   display: block;
   filter: drop-shadow(0 0 0.75rem #ffffff40);
 }
@@ -66,18 +66,18 @@
   color: #262626;
   width: 10rem;
 }
-#container.plain .letter {
+#introduction.plain .letter {
   background: transparent;
   color: white;
   padding: 0;
 }
 
-#container.final .T,
-#container.none .T {
+#introduction.final .T,
+#introduction.none .T {
   border-radius: 10px 0 0 10px;
 }
-#container.final .h,
-#container.none .h {
+#introduction.final .h,
+#introduction.none .h {
   border-radius: 0 10px 10px 0;
 }
 
@@ -89,16 +89,16 @@
 }
 
 @media (max-width: 980px) {
-  #container {
+  #introduction {
     flex-direction: column;
   }
 
-  #container.final .T,
-  #container.none .T {
+  #introduction.final .T,
+  #introduction.none .T {
     border-radius: 10px 10px 0px 0px;
   }
-  #container.final .h,
-  #container.none .h {
+  #introduction.final .h,
+  #introduction.none .h {
     border-radius: 0 0 10px 10px;
   }
 
@@ -106,8 +106,8 @@
   .anatonelly {
     font-size: 3vmax;
   }
-  #container.final .for,
-  #container.final .anatonelly {
+  #introduction.final .for,
+  #introduction.final .anatonelly {
     filter: drop-shadow(0 0 0.5rem #ffffff40);
   }
 }
