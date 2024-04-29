@@ -89,6 +89,56 @@ const index = () => {
 
         sx = nx;
         sy = ny;
+        document.onpointerdown = function (e) {
+          clearInterval(odrag.timer);
+          e = e || window.event;
+    
+          sx = e.clientX;
+          sy = e.clientY;
+    
+          document.onpointermove = function (e) {
+            e = e || window.event;
+            nx = e.clientX;
+            ny = e.clientY;
+            desx = nx - sx;
+            desy = ny - sy;
+    
+            tx = tx + desx * 0.1;
+            ty = ty + desy * 0.1;
+    
+            const odrag = document.getElementById('dragcontainer');
+            applyTranform(odrag);
+    
+            sx = nx;
+            sy = ny;
+          };
+          document.onpointerup = function (e) {
+            const odrag = document.getElementById('dragcontainer');
+            odrag.timer = setInterval(function () {
+              desx *= 0.95;
+              desy *= 0.95;
+              tx = tx + desx * 0.1;
+              ty = ty + desy * 0.1;
+    
+              applyTranform(odrag);
+              playSpin(false);
+    
+              if (Math.abs(desx) < 0.5 && Math.abs(desy) < 0.5) {
+                clearInterval(odrag.timer);
+                playSpin(true);
+              }
+            }, 17);
+            document.onpointermove = document.onpointerup = null;
+          };
+          return false;
+        };
+    
+        document.onmousewheel = function (e) {
+          e = e || window.event;
+          const d = e.wheelDelta / 20 || -e.detail;
+          radius += d;
+          init(1);
+        };
       };
       document.onpointerup = function (e) {
         const odrag = document.getElementById('dragcontainer');
