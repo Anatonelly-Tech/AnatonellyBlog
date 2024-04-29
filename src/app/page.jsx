@@ -14,11 +14,13 @@ export default function Home() {
     <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50 flex flex-col items-end justify-start '>
       <InicialScreen />
       <Navbar />
-      <Carousel />
-      {/* SobreNos */}
-      <AboutUs />
-      <AnatonellyLLC />
-      <Footer />
+      <div className='relative -z-40 flex flex-col h-auto w-screen overflow-x-hidden'>
+        <Carousel />
+        {/* SobreNos */}
+        <AboutUs />
+        <AnatonellyLLC />
+        <Footer />
+      </div>
     </div>
   );
 }

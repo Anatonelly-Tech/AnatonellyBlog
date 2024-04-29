@@ -35,7 +35,7 @@ const index = () => {
   return (
     <div
       id='AnatonellyLLC'
-      className='w-screen h-auto flex flex-col -z-10 bg-neutral-200 '
+      className='pb-20 w-screen h-auto flex flex-col -z-10 bg-neutral-200 '
     >
       <div className='w-full flex flex-col items-start'>
         <span
@@ -188,7 +188,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className='w-full h-auto flex flex-col items-center justify-start bg-gradient-to-b from-white to-neutral-800 z-10 p-10 pb-36'>
+      <div className='w-full min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-white to-neutral-800 z-10 p-10 pb-36'>
         <div className='flex items-start justify-center w-full h-52'>
           <span
             id='TitleLetter'
@@ -204,9 +204,14 @@ const index = () => {
         </div>
         <div
           id='Lists'
-          className='z-40 w-full h-auto flex items-center justify-center'
+          className='z-40 w-full min-h-64 flex flex-wrap gap-40 items-center justify-center p-20'
         >
-          <Card3D cardsArray={cards1} />
+          {
+            /* eslint-disable react/jsx-key */
+            cards1.map((card) => (
+              <Card3D img={card.Img} title={card.title} text={card.text} />
+            ))
+          }
         </div>
       </div>
       <div className='bg-neutral-800 w-full h-screen  flex flex-col items-center justify-around'>
@@ -246,9 +251,14 @@ const index = () => {
         </span>
         <div
           id='Lists'
-          className='w-full h-auto flex items-center justify-center '
+          className='z-40 w-full min-h-64 flex flex-wrap gap-40 items-center justify-center p-20'
         >
-          <Card3D cardsArray={cards2} />
+          {
+            /* eslint-disable react/jsx-key */
+            cards2.map((card) => (
+              <Card3D img={card.Img} title={card.title} text={card.text} />
+            ))
+          }
         </div>
       </div>
     </div>
