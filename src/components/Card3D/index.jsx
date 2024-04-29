@@ -1,67 +1,43 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
 // Libs
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-// import Card from 'react-animated-3d-card';
+import { useMotionValue, useTransform, motion } from 'framer-motion';
 
-const Card3D = ({ cardsArray }) => {
+const Card3D = ({ img, title, text }) => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(y, [-100, 100], [30, -30]);
+  const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+
   return (
-    <Box
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Grid
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-        container
-        spacing={2}
+    <div className='grow basis-40 ' style={{ perspective: 2000 }}>
+      <motion.div
+        style={{ x, y, rotateX, rotateY, z: 100 }}
+        drag
+        dragElastic={0.18}
+        dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        whileTap={{ cursor: 'grabbing' }}
+        className='min-w-[200px] max-w-[500px] h-auto bg-neutral-300 flex flex-col items-center justify-center rounded-xl border-4 border-white px-10 py-6 cursor-grab relative shadow-neutral-800 shadow-xl'
       >
-        {cardsArray.map((item) => (
-          <Grid
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            key={item.title}
-          >
-            <div className='flex h-auto bg-neutral-200 rounded w-36'>
-              {item.title}
-              {item.text}
-            </div>
-            {/* <Card
-              style={{
-                width: '200px',
-                height: '300px',
-                cursor: 'pointer',
-              }}
-            >
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='div'>
-                  {item.title}
-                </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                  {item.text}
-                </Typography>
-              </CardContent>
-            </Card> */}
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+        {/* title */}
+        <div className='text-2xl mb-6 font-extrabold'>{title}</div>
+        {/* text */}
+        <div className='max-w-60 mb-6 text-black'>{text}</div>
+        {/* img */}
+        <motion.div
+          style={{ x, y, rotateX, rotateY, z: 100 }}
+          className='absolute -bottom-10 -right-20 w-auto flex items-center justify-center'
+        >
+          <img
+            draggable='false'
+            className='bg-neutral-700 w-36 rounded-full h-36 object-cover border-4 border-white shadow-xl'
+            src={img}
+            alt=''
+          />
+        </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
