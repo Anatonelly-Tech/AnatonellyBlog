@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import AboutUs from '@/components/AboutUs';
 import Footer from '@/components/Footer';
 import AnatonellyLLC from '@/components/AnatonellyLLC';
+import GlobalTransportes from '@/components/GlobalTransportes';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         {/* SobreNos */}
         <AboutUs />
         <AnatonellyLLC />
+        <GlobalTransportes />
         <Footer />
       </div>
     </div>

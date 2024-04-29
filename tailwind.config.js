@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      dropShadow: {
+        white: '0px 0px 15px #a4a6b2',
+      },
       colors: {
         Anatonelly: {
           100: '#9c83f2',

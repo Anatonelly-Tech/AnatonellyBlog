@@ -11,14 +11,17 @@ const Card3D = ({ img, title, text }) => {
   const rotateY = useTransform(x, [-100, 100], [-30, 30]);
 
   return (
-    <div className='grow basis-40 ' style={{ perspective: 2000 }}>
+    <div
+      className='grow basis-auto hover:scale-105 transition-all durantion-1000'
+      style={{ perspective: 9000 }}
+    >
       <motion.div
         style={{ x, y, rotateX, rotateY, z: 100 }}
         drag
         dragElastic={0.18}
         dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
         whileTap={{ cursor: 'grabbing' }}
-        className='min-w-[200px] max-w-[500px] h-auto bg-neutral-300 flex flex-col items-center justify-center rounded-xl border-4 border-white px-10 py-6 cursor-grab relative shadow-neutral-800 shadow-xl'
+        className=' min-w-[200px] max-w-[500px] h-auto bg-neutral-300 flex flex-col items-center justify-center rounded-xl border-4 border-white px-10 py-6 cursor-grab relative shadow-neutral-800 shadow-xl'
       >
         {/* title */}
         <div className='text-2xl mb-6 font-extrabold'>{title}</div>
