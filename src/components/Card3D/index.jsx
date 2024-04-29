@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Card from 'react-animated-3d-card';
+// import Card from 'react-animated-3d-card';
 
 const Card3D = ({ cardsArray }) => {
   return (
@@ -38,7 +38,11 @@ const Card3D = ({ cardsArray }) => {
             md={4}
             key={item.title}
           >
-            <Card
+            <div className='flex h-auto bg-neutral-200 rounded w-36'>
+              {item.title}
+              {item.text}
+            </div>
+            {/* <Card
               style={{
                 width: '200px',
                 height: '300px',
@@ -53,7 +57,7 @@ const Card3D = ({ cardsArray }) => {
                   {item.text}
                 </Typography>
               </CardContent>
-            </Card>
+            </Card> */}
           </Grid>
         ))}
       </Grid>
