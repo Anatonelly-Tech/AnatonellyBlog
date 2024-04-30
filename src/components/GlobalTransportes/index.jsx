@@ -195,7 +195,7 @@ const Index = () => {
           className='flex h-auto sm:w-3/5 w-full sm:mt-32 mt-12 items-center justify-start flex-col bg-neutral-200 sm:p-20 p-10 rounded-full shadow-lg shadow-neutral-500'
         >
           {' '}
-          <span className='sm:text-2xl text-lg text-black sm:w-5/6 w-full text-center h-full flex items-center justify-center '>
+          <span className='sm:text-2xl text-lg text-black sm:w-5/6 w-full text-center h-full flex items-center justify-center p-10'>
             Nosso foco principal é encontrar fretes em aberto no mercado e
             conectar essas oportunidades com motoristas autônomos altamente
             qualificados. Ao fazer isso, não apenas ajudamos a preencher lacunas
@@ -206,7 +206,7 @@ const Index = () => {
       </div>
       <div
         id='textEditDiv2'
-        className='h-auto pb-32 w-full flex flex-col items-center justify-start '
+        className='h-auto sm:pb-32 pb-12 w-full flex flex-col items-center justify-start '
       >
         <section className='flex flex-col items-center justify-start gap-20 '>
           <p className='p text-neutral-800 font-bold '>
@@ -217,10 +217,10 @@ const Index = () => {
         </section>
         <div
           id='Img'
-          className='flex h-auto w-3/5 mt-32 items-center justify-start flex-col bg-neutral-200 p-20 rounded-full shadow-lg shadow-neutral-500'
+          className='flex h-auto sm:w-3/5 w-full sm:mt-32 mt-12 items-center justify-start flex-col bg-neutral-200 sm:p-20 p-10 rounded-full shadow-lg shadow-neutral-500'
         >
           {' '}
-          <span className='text-2xl text-black w-5/6 text-center  h-full flex items-center justify-center '>
+          <span className='sm:text-2xl text-lg text-black sm:w-5/6 w-full text-center h-full flex items-center justify-center p-10'>
             Sabemos que a logística pode ser complicada e estressante. É por
             isso que estamos aqui para tirar essa dor de cabeça do seu caminho.
             Ao confiar na Global Transportes, você pode ter certeza de que sua
@@ -232,7 +232,7 @@ const Index = () => {
       </div>
       <div
         id='textEditDiv3'
-        className='h-auto pb-64 w-full flex flex-col items-center justify-start '
+        className='h-auto sm:pb-32 pb-12 w-full flex flex-col items-center justify-start '
       >
         <section className='flex flex-col items-center justify-start gap-20 '>
           <p className='p text-neutral-800 font-bold '>
@@ -241,10 +241,10 @@ const Index = () => {
         </section>
         <div
           id='Img'
-          className='flex h-auto w-3/5 mt-32 items-center justify-start flex-col bg-neutral-200 p-20 rounded-full shadow-lg shadow-neutral-500'
+          className='flex h-auto sm:w-3/5 w-full sm:mt-32 mt-12 items-center justify-start flex-col bg-neutral-200 sm:p-20 p-10 rounded-full shadow-lg shadow-neutral-500'
         >
           {' '}
-          <span className='text-2xl text-black w-5/6 text-center  h-full flex items-center justify-center '>
+          <span className='sm:text-2xl text-lg text-black sm:w-5/6 w-full text-center h-full flex items-center justify-center p-10'>
             Se você está procurando uma parceria confiável para suas
             necessidades de transporte de carga ou é um motorista autônomo em
             busca de oportunidades emocionantes, a Global Transportes é o seu
@@ -255,7 +255,7 @@ const Index = () => {
       </div>
       <div
         id='textEditDiv4'
-        className='h-screen w-full flex flex-col items-center justify-center pb-32  '
+        className='h-auto sm:pb-32 pb-12 w-full flex flex-col items-center justify-start '
       >
         <section className='flex flex-col items-center justify-start gap-20 '>
           <p className='p p4 text-black text-center '>
