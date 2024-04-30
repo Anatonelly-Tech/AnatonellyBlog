@@ -40,7 +40,7 @@ export const Logo4 = {
 };
 
 export const Img = {
-  delay: 2000,
+  delay: 500,
   distance: '100%',
   origin: 'bottom',
   opacity: '0',

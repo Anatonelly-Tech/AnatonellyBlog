@@ -88,30 +88,6 @@
   right: 30px;
 }
 
-@media (max-width: 980px) {
-  #introduction {
-    flex-direction: column;
-  }
-
-  #introduction.final .T,
-  #introduction.none .T {
-    border-radius: 10px 10px 0px 0px;
-  }
-  #introduction.final .h,
-  #introduction.none .h {
-    border-radius: 0 0 10px 10px;
-  }
-
-  .for,
-  .anatonelly {
-    font-size: 3vmax;
-  }
-  #introduction.final .for,
-  #introduction.final .anatonelly {
-    filter: drop-shadow(0 0 0.5rem #ffffff40);
-  }
-}
-
 :root {
   --bg: hsl(0 0% 2%);
   --color: hsl(0 0% 100% / 0.1);
@@ -188,5 +164,30 @@
     background-position-y: 100%;
     background-clip: text;
     color: var(--finish-fill);
+  }
+}
+
+
+@media (max-width: 980px) {
+  #introduction {
+    flex-direction: column;
+  }
+
+  #introduction.final .T,
+  #introduction.none .T {
+    border-radius: 10px 10px 0px 0px;
+  }
+  #introduction.final .h,
+  #introduction.none .h {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .for,
+  .anatonelly {
+    font-size: 3vmax;
+  }
+  #introduction.final .for,
+  #introduction.final .anatonelly {
+    filter: drop-shadow(0 0 0.5rem #ffffff40);
   }
 }

@@ -9,6 +9,7 @@ import AboutUs from '@/components/AboutUs';
 import Footer from '@/components/Footer';
 import AnatonellyLLC from '@/components/AnatonellyLLC';
 import AnatonellyTech from '@/components/AnatonellyTech';
+import GlobalTransportes from '@/components/GlobalTransportes';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <AboutUs />
         <AnatonellyLLC />
         <AnatonellyTech />
+        <GlobalTransportes />
         <Footer />
       </div>
     </div>
