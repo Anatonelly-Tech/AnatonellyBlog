@@ -208,8 +208,13 @@ const index = () => {
         >
           {
             /* eslint-disable react/jsx-key */
-            cards1.map((card) => (
-              <Card3D img={card.Img} title={card.title} text={card.text} />
+            cards1.map((card, index) => (
+              <Card3D
+                key={index}
+                img={card.Img}
+                title={card.title}
+                text={card.text}
+              />
             ))
           }
         </div>
@@ -255,8 +260,13 @@ const index = () => {
         >
           {
             /* eslint-disable react/jsx-key */
-            cards2.map((card) => (
-              <Card3D img={card.Img} title={card.title} text={card.text} />
+            cards2.map((card, index) => (
+              <Card3D
+                key={index}
+                img={card.Img}
+                title={card.title}
+                text={card.text}
+              />
             ))
           }
         </div>
