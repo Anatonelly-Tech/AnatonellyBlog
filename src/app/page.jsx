@@ -16,9 +16,9 @@ export default function Home() {
       <InicialScreen />
       <Navbar />
       <div className='relative -z-40 flex flex-col h-auto w-screen overflow-x-hidden'>
-        {/* <Carousel />
+        <Carousel />
         <AboutUs />
-        <AnatonellyLLC /> */}
+        <AnatonellyLLC />
         <AnatonellyTech />
         <Footer />
       </div>

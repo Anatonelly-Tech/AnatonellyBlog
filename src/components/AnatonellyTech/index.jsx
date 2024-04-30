@@ -143,7 +143,7 @@ const index = () => {
       gsap.to('.titleReveal > span', {
         '--progress': 1,
         scrollTrigger: {
-          markers: true,
+          // markers: true,
           trigger: '#titleReveal',
           scrub,
           start: 'top center',
@@ -165,12 +165,11 @@ const index = () => {
   );
 
   return (
-    <div
-      id='AnatonellyTech'
-      ref={Tech}
-      className='w-full h-auto flex flex-col '
-    >
-      <div className='bg-neutral-800 h-screen w-full flex flex-col'>
+    <div ref={Tech} className='w-full h-auto flex flex-col '>
+      <div
+        id='AnatonellyTech'
+        className='bg-neutral-800 h-screen w-full flex flex-col'
+      >
         <div ref={introduction} id='introduction' className='final'>
           <div className='letter T'>T</div>
           <div className='letter e'>e</div>
