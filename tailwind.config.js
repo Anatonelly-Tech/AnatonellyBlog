@@ -30,6 +30,7 @@ module.exports = {
         truckInicial: "url('/InicialScreen/BgCaminhao.png')",
         AboutUs: "url('/AboutUs/BgNossosNumeros.png')",
         AnatonellyLLC: "url('/AnatonellyLLC/aboutUsLLC.jpg')",
+        Global: "url('/GlobalTransportes/GlobalTransportes.svg')",
       },
       fontWeight: {
         hairline: 100,

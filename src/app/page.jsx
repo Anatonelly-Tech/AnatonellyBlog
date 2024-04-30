@@ -12,14 +12,13 @@ import GlobalTransportes from '@/components/GlobalTransportes';
 
 export default function Home() {
   return (
-    <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50 flex flex-col items-end justify-start '>
+    <div className='min-h-screen h-auto w-full relative bg-neutral-200 -z-50 flex flex-col items-end justify-start scroll-smooth '>
       <InicialScreen />
       <Navbar />
       <div className='relative -z-40 flex flex-col h-auto w-screen overflow-x-hidden'>
-        <Carousel />
-        {/* SobreNos */}
+        {/* <Carousel />
         <AboutUs />
-        <AnatonellyLLC />
+        <AnatonellyLLC /> */}
         <GlobalTransportes />
         <Footer />
       </div>

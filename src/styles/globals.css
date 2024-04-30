@@ -8,7 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #303030;
-}
+  scroll-behavior: smooth;}
 
 /* width */
 ::-webkit-scrollbar {
