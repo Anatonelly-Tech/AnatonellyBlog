@@ -88,8 +88,6 @@
   right: 30px;
 }
 
-
-
 :root {
   --bg: hsl(0 0% 2%);
   --color: hsl(0 0% 100% / 0.1);
@@ -168,6 +166,7 @@
     color: var(--finish-fill);
   }
 }
+
 
 @media (max-width: 980px) {
   #introduction {
