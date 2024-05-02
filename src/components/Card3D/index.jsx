@@ -30,7 +30,7 @@ const Card3D = ({ img, title, text }) => {
         {/* img */}
         <motion.div
           style={{ x, y, rotateX, rotateY, z: 100 }}
-          className='absolute -bottom-10 -right-20 w-auto flex items-center justify-center'
+          className='absolute md:-bottom-10 md:-right-20 xxs:-bottom-24  w-auto flex items-center justify-center'
         >
           <img
             draggable='false'
