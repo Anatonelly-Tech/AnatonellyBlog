@@ -156,15 +156,15 @@ const index = () => {
           <div className="w-full h-full bg-black/80 p-10 flex flex-col items-center justify-start gap-20">
             <div className="w-full flex flex-col items-start">
               <span
-                id="TitleLetter"
-                className="text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold pl-52"
+                id='TitleLetter'
+                className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold md:pl-52 xxs:pl-0'
               >
                 Sobre nós:{" "}
               </span>
             </div>
             <div
-              id="Lists"
-              className="w-8/12 h-5/6 flex flex-col items-center justify-start lg:gap-20 gap-10"
+              id='Lists'
+              className='xxs:w-full md:w-8/12 h-5/6 flex flex-col items-center justify-start lg:gap-20 gap-10'
             >
               <p className="text-white text-sm font-semibold lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base">
                 Informações sobre a equipe de especialistas em logística e
@@ -203,8 +203,8 @@ const index = () => {
           />
         </div>
         <div
-          id="Lists"
-          className="z-40 w-full min-h-64 flex flex-wrap gap-40 items-center justify-center p-20"
+          id='Lists'
+          className='z-40 w-full min-h-64 flex flex-wrap gap-40 items-center justify-center md:p-20 '
         >
           {
             /* eslint-disable react/jsx-key */
@@ -222,8 +222,8 @@ const index = () => {
       <div className="bg-neutral-800 w-full h-screen  flex flex-col items-center justify-around">
         <div className="w-full flex flex-col items-start">
           <span
-            id="TitleLetter"
-            className="text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold pl-52"
+            id='TitleLetter'
+            className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold md:pl-52 xxs:pl-10'
           >
             Destinos:{" "}
           </span>
@@ -246,7 +246,7 @@ const index = () => {
           </p>
         </div>
       </div>
-      <div className="bg-gradient-to-t h-screen from-neutral-200 to-neutral-800 flex flex-col items-start justify-evenly">
+      <div className='bg-gradient-to-t md:h-screen xxs:h-auto from-neutral-200 to-neutral-800 flex flex-col items-start justify-evenly'>
         <span
           id="TitleLetter"
           className="text-start text-white font-bold inline-block pl-20 lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl"
