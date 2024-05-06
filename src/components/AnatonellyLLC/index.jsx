@@ -1,65 +1,65 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 // Utils
-import { cards1 } from "@/utils/cards";
-import { cards2 } from "@/utils/cards";
+import { cards1 } from '@/utils/cards';
+import { cards2 } from '@/utils/cards';
 
 // Components
-import CardGuidance from "@/components/CardGuidance";
-import Card3D from "@/components/Card3D";
+import CardGuidance from '@/components/CardGuidance';
+import Card3D from '@/components/Card3D';
 
 // Icons
-import { FaTruck } from "react-icons/fa"; //transporte terrestre
-import { GiCargoShip } from "react-icons/gi"; //transporte maritimo
-import { GiAirplaneDeparture } from "react-icons/gi"; //transporte aéreo
-import { CiBoxes } from "react-icons/ci"; //Serviços Alfandegários:
-import { GiHarborDock } from "react-icons/gi"; //Serviços de Logística
+import { FaTruck } from 'react-icons/fa'; //transporte terrestre
+import { GiCargoShip } from 'react-icons/gi'; //transporte maritimo
+import { GiAirplaneDeparture } from 'react-icons/gi'; //transporte aéreo
+import { CiBoxes } from 'react-icons/ci'; //Serviços Alfandegários:
+import { GiHarborDock } from 'react-icons/gi'; //Serviços de Logística
 
 // Utils
-import { TitleLetter, Paragraph, Lists, Img } from "@/utils/animations";
+import { TitleLetter, Paragraph, Lists, Img } from '@/utils/animations';
 
 const index = () => {
   useEffect(() => {
     async function loadReveal() {
-      const sr = (await import("scrollreveal")).default();
+      const sr = (await import('scrollreveal')).default();
 
-      sr.reveal("#TitleLetter", TitleLetter);
-      sr.reveal("#Paragraph", Paragraph);
-      sr.reveal("#Lists", Lists);
-      sr.reveal("#Img", Img);
+      sr.reveal('#TitleLetter', TitleLetter);
+      sr.reveal('#Paragraph', Paragraph);
+      sr.reveal('#Lists', Lists);
+      sr.reveal('#Img', Img);
     }
     loadReveal();
   }, []);
   return (
     <div
-      id="AnatonellyLLC"
-      className="pb-20 w-screen h-auto flex flex-col -z-10  "
+      id='AnatonellyLLC'
+      className='pb-20 w-screen h-auto flex flex-col -z-10  '
     >
-      <div className="w-full flex flex-col items-start">
+      <div className='w-full flex flex-col items-start bg-neutral-200 p-5'>
         <span
-          id="TitleLetter"
-          className=" flex items-start justify-start font-black lg:text-6xl md:text-6xl sm:text-4xl xs:text-2xl xxs:xl text-start"
+          id='TitleLetter'
+          className=' flex items-start justify-start font-black lg:text-6xl md:text-6xl sm:text-4xl xs:text-2xl xxs:xl text-start '
         >
           Anatonelly LLC
         </span>
       </div>
-      <div className="h-auto w-full bg-neutral-800 flex flex-col justify-center items-center ">
-        <div className="flex flex-col justify-center items-start gap-10 p-10">
-          <div className="w-full flex flex-col items-start">
+      <div className='h-auto w-full bg-neutral-800 flex flex-col justify-center items-center '>
+        <div className='flex flex-col justify-center items-start gap-10 p-10'>
+          <div className='w-full flex flex-col items-start'>
             <span
-              id="Paragraph"
-              className="text-white text-xl font-bold inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl "
+              id='Paragraph'
+              className='text-white text-xl font-bold inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
             >
               Introdução
             </span>
           </div>
 
-          <div className="flex flex-col justify-center h-5/6 items-center gap-5">
+          <div className='flex flex-col justify-center h-5/6 items-center gap-5'>
             <span
-              id="Paragraph"
-              className="text-white text-2xl text-justify font-normal w-full lg:w-1/2 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base "
+              id='Paragraph'
+              className='text-white text-2xl text-justify font-normal w-full lg:w-1/2 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base '
             >
               Anatonelly LLC é uma empresa em ascensão no setor de transporte
               internacional, focada em importação e exportação. Nosso
@@ -73,8 +73,8 @@ const index = () => {
               conectando você aos mercados globais de maneira eficiente e segura
             </span>
             <span
-              id="Paragraph"
-              className="text-white text-2xl text-justify font-normal w-full lg:w-1/2 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base "
+              id='Paragraph'
+              className='text-white text-2xl text-justify font-normal w-full lg:w-1/2 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base '
             >
               Destaques dos principais serviços oferecidos, como transporte
               terrestre, marítimo e aéreo, além de serviços alfandegários e de
@@ -85,64 +85,64 @@ const index = () => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-5 w-full bg-neutral-100 text-black p-10">
-          <div className="w-full flex flex-col items-start">
+        <div className='flex flex-col justify-center items-center gap-5 w-full bg-neutral-100 text-black p-10'>
+          <div className='w-full flex flex-col items-start'>
             <span
-              id="TitleLetter"
-              className="text-start text-xl font-bold inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl "
+              id='TitleLetter'
+              className='text-start text-xl font-bold inline-block lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
             >
-              Nossa expertise abrange:{" "}
+              Nossa expertise abrange:{' '}
             </span>
           </div>
-          <div className="flex flex-col items-center justify-center gap-10">
+          <div className='flex flex-col items-center justify-center gap-10'>
             <div
-              id="Paragraph"
-              className=" flex xxs:flex-col md:flex-row  items-center justify-center w-full gap-5 "
+              id='Paragraph'
+              className=' flex xxs:flex-col md:flex-row  items-center justify-center w-full gap-5 '
             >
               <CardGuidance
-                icon={<FaTruck size={30} className="invert" />}
-                title={"Transporte Terrestre"}
+                icon={<FaTruck size={30} className='invert' />}
+                title={'Transporte Terrestre'}
                 text={
-                  "Navegamos pelas estradas com eficiência e segurança, oferecendo soluções de transporte terrestre ágeis e confiáveis para suas mercadorias, independentemente do destino ou da carga."
+                  'Navegamos pelas estradas com eficiência e segurança, oferecendo soluções de transporte terrestre ágeis e confiáveis para suas mercadorias, independentemente do destino ou da carga.'
                 }
               />
               <CardGuidance
-                icon={<GiCargoShip size={30} className="invert" />}
-                title={"Transporte Marítimo"}
+                icon={<GiCargoShip size={30} className='invert' />}
+                title={'Transporte Marítimo'}
                 text={
-                  "Conduzimos sua carga pelos mares com expertise, utilizando rotas marítimas estratégicas e parcerias confiáveis para garantir entregas pontuais e econômicas em todo o mundo."
+                  'Conduzimos sua carga pelos mares com expertise, utilizando rotas marítimas estratégicas e parcerias confiáveis para garantir entregas pontuais e econômicas em todo o mundo.'
                 }
               />
               <CardGuidance
-                icon={<GiAirplaneDeparture size={30} className="invert" />}
-                title={"Transporte Aéreo"}
+                icon={<GiAirplaneDeparture size={30} className='invert' />}
+                title={'Transporte Aéreo'}
                 text={
-                  "Elevamos suas expectativas com nossos serviços de transporte aéreo rápido e eficiente. Com acesso a uma extensa rede de rotas e operadores, garantimos que suas mercadorias cheguem ao destino final no menor tempo possível."
+                  'Elevamos suas expectativas com nossos serviços de transporte aéreo rápido e eficiente. Com acesso a uma extensa rede de rotas e operadores, garantimos que suas mercadorias cheguem ao destino final no menor tempo possível.'
                 }
               />
             </div>
             <div
-              id="Paragraph"
-              className="flex xxs:flex-col md:flex-row items-center justify-center w-full gap-5 "
+              id='Paragraph'
+              className='flex xxs:flex-col md:flex-row items-center justify-center w-full gap-5 '
             >
               <CardGuidance
-                icon={<CiBoxes size={30} className="invert" />}
-                title={"Serviços Alfandegários"}
+                icon={<CiBoxes size={30} className='invert' />}
+                title={'Serviços Alfandegários'}
                 text={
-                  "Simplificamos os processos alfandegários complexos, fornecendo serviços de desembaraço aduaneiro rápidos e precisos para garantir a conformidade regulatória e a liberação rápida de sua carga."
+                  'Simplificamos os processos alfandegários complexos, fornecendo serviços de desembaraço aduaneiro rápidos e precisos para garantir a conformidade regulatória e a liberação rápida de sua carga.'
                 }
               />
               <CardGuidance
-                icon={<GiHarborDock size={30} className="invert" />}
-                title={"Serviços de Logística"}
+                icon={<GiHarborDock size={30} className='invert' />}
+                title={'Serviços de Logística'}
                 text={
-                  "Vamos além do transporte básico, oferecendo soluções de logística completas e personalizadas para otimizar sua cadeia de suprimentos. Desde o armazenamento até a distribuição, estamos aqui para atender às suas necessidades logísticas com eficiência e profissionalismo."
+                  'Vamos além do transporte básico, oferecendo soluções de logística completas e personalizadas para otimizar sua cadeia de suprimentos. Desde o armazenamento até a distribuição, estamos aqui para atender às suas necessidades logísticas com eficiência e profissionalismo.'
                 }
               />
             </div>
             <span
-              id="Paragraph"
-              className="  font-semibold w-full lg:p-16 md:gap-12 sm:gap-10 xs:gap-8 xxs:gap-6 text-justify lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base"
+              id='Paragraph'
+              className='  font-semibold w-full lg:p-16 md:gap-12 sm:gap-10 xs:gap-8 xxs:gap-6 text-justify lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base'
             >
               Na Anatonelly LLC, nossa prioridade é fornecer serviços de alta
               qualidade que atendam e superem as expectativas de nossos
@@ -152,25 +152,25 @@ const index = () => {
             </span>
           </div>
         </div>
-        <div className="bg-AnatonellyLLC lg:h-[91.5vh] h-auto w-full bg-cover z-20">
-          <div className="w-full h-full bg-black/80 p-10 flex flex-col items-center justify-start gap-20">
-            <div className="w-full flex flex-col items-start">
+        <div className='bg-AnatonellyLLC lg:h-[91.5vh] h-auto w-full bg-cover z-20'>
+          <div className='w-full h-full bg-black/80 p-10 flex flex-col items-center justify-start gap-20'>
+            <div className='w-full flex flex-col items-start'>
               <span
                 id='TitleLetter'
                 className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold md:pl-52 xxs:pl-0'
               >
-                Sobre nós:{" "}
+                Sobre nós:{' '}
               </span>
             </div>
             <div
               id='Lists'
               className='xxs:w-full md:w-8/12 h-5/6 flex flex-col items-center justify-start lg:gap-20 gap-10'
             >
-              <p className="text-white text-sm font-semibold lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base">
+              <p className='text-white text-sm font-semibold lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base'>
                 Informações sobre a equipe de especialistas em logística e
                 transporte da Anatonelly LLC.
               </p>
-              <p className="text-white text-sm lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base">
+              <p className='text-white text-sm lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base'>
                 Na Anatonelly LLC, contamos com uma equipe de especialistas em
                 logística e transporte altamente qualificados e experientes,
                 dedicados a fornecer soluções personalizadas e eficientes para
@@ -188,18 +188,18 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className="w-full min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-white to-neutral-800 z-10 p-10 pb-36">
-        <div className="flex items-start justify-center w-full h-52">
+      <div className='w-full min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-white to-neutral-800 z-10 p-10 pb-36'>
+        <div className='flex items-start justify-center w-full h-52'>
           <span
-            id="TitleLetter"
-            className="text-center text-black text-xl font-bold w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl "
+            id='TitleLetter'
+            className='text-center text-black text-xl font-bold w-full lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl '
           >
-            Serviços:{" "}
+            Serviços:{' '}
           </span>
           <img
-            className="relative  z-10 lg:-translate-x-1/2 hidden lg:flex"
-            src="/AnatonellyLLC/objectAnatonellyLLC.png"
-            alt=""
+            className='relative  z-10 lg:-translate-x-1/2 hidden lg:flex'
+            src='/AnatonellyLLC/objectAnatonellyLLC.png'
+            alt=''
           />
         </div>
         <div
@@ -219,20 +219,20 @@ const index = () => {
           }
         </div>
       </div>
-      <div className="bg-neutral-800 w-full h-screen  flex flex-col items-center justify-around">
-        <div className="w-full flex flex-col items-start">
+      <div className='bg-neutral-800 w-full h-screen  flex flex-col items-center justify-around'>
+        <div className='w-full flex flex-col items-start'>
           <span
             id='TitleLetter'
             className='text-start text-white lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold md:pl-52 xxs:pl-10'
           >
-            Destinos:{" "}
+            Destinos:{' '}
           </span>
         </div>
         <div
-          id="Paragraph"
-          className="lg:w-1/2 w-3/4 h-auto flex items-center justify-center bg-neutral-200 lg:p-20 p-5 rounded-2xl shadow-2xl shadow-neutral-500"
+          id='Paragraph'
+          className='lg:w-1/2 w-3/4 h-auto flex items-center justify-center bg-neutral-200 lg:p-20 p-5 rounded-2xl shadow-2xl shadow-neutral-500'
         >
-          <p className="text-neutral-700 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base">
+          <p className='text-neutral-700 lg:text-2xl md:text-1xl sm:text-lgxl xs:text-base'>
             Na Anatonelly LLC, conectamos seus negócios aos principais destinos
             globais, facilitando o comércio internacional de e para a China e os
             Estados Unidos. Com nossa expertise em transporte terrestre,
@@ -248,14 +248,14 @@ const index = () => {
       </div>
       <div className='bg-gradient-to-t md:h-screen xxs:h-auto from-neutral-200 to-neutral-800 flex flex-col items-start justify-evenly'>
         <span
-          id="TitleLetter"
-          className="text-start text-white font-bold inline-block pl-20 lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl"
+          id='TitleLetter'
+          className='text-start text-white font-bold inline-block pl-20 lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl'
         >
-          Recursos:{" "}
+          Recursos:{' '}
         </span>
         <div
-          id="Lists"
-          className="z-40 w-full min-h-64 flex flex-wrap gap-40 items-center justify-center p-20"
+          id='Lists'
+          className='z-40 w-full min-h-64 flex flex-wrap gap-40 items-center justify-center p-20'
         >
           {
             /* eslint-disable react/jsx-key */

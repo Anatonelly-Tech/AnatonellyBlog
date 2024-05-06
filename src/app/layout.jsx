@@ -13,7 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' className='scroll-smooth'>
-      <body className={(poppins.className, 'h-auto w-full relative -z-50 bg-neutral-200')}>
+      <body
+        className={
+          (poppins.className, 'h-auto w-full relative -z-50 bg-neutral-200')
+        }
+      >
         {children}
       </body>
     </html>
