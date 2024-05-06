@@ -1,15 +1,39 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 //Styles
 import './style.css';
 
-// Utils
-import itensCarousel from '@/utils/itensCarousel';
-
 const index = () => {
+  const [datas, setDatas] = useState([]);
+  var count = 0;
+
+  useEffect(() => {
+    const getDatas = async () => {
+      const api = await fetch(
+        'https://6i0go4dj.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%27carousel%27%5D+%7B%0A++title%2C%0A++%22imageUrl%22%3A+image.asset-%3Eurl%0A%7D'
+      );
+      const data = await api.json();
+      console.log(data.result);
+      setDatas(data.result);
+      count++;
+    };
+    if (count === 0) {
+      getDatas();
+    } else {
+    }
+  }, [count]);
+  let itensCarousel = [];
+  datas.map((data) => {
+    itensCarousel.push({
+      img: data.imageUrl,
+      title: data.title,
+    });
+  });
+  console.log(itensCarousel);
+
   useEffect(() => {
     var tx = 0;
     var ty = 10;
@@ -92,23 +116,23 @@ const index = () => {
         document.onpointerdown = function (e) {
           clearInterval(odrag.timer);
           e = e || window.event;
-    
+
           sx = e.clientX;
           sy = e.clientY;
-    
+
           document.onpointermove = function (e) {
             e = e || window.event;
             nx = e.clientX;
             ny = e.clientY;
             desx = nx - sx;
             desy = ny - sy;
-    
+
             tx = tx + desx * 0.1;
             ty = ty + desy * 0.1;
-    
+
             const odrag = document.getElementById('dragcontainer');
             applyTranform(odrag);
-    
+
             sx = nx;
             sy = ny;
           };
@@ -119,10 +143,10 @@ const index = () => {
               desy *= 0.95;
               tx = tx + desx * 0.1;
               ty = ty + desy * 0.1;
-    
+
               applyTranform(odrag);
               playSpin(false);
-    
+
               if (Math.abs(desx) < 0.5 && Math.abs(desy) < 0.5) {
                 clearInterval(odrag.timer);
                 playSpin(true);
@@ -132,7 +156,7 @@ const index = () => {
           };
           return false;
         };
-    
+
         document.onmousewheel = function (e) {
           e = e || window.event;
           const d = e.wheelDelta / 20 || -e.detail;
@@ -167,14 +191,16 @@ const index = () => {
       radius += d;
       init(1);
     };
-  }, []);
+  }, [datas]);
   return (
     <div className='bodyCarousel  md:flex xxs:hidden h-[150vh] w-full  bg-neutral-800'>
       <div id='dragcontainer'>
         <div id='spincontainer'>
-          {itensCarousel.map((item, index) => (
-            <img id='img' key={index} src={item.imagem} alt='' />
-          ))}
+          {itensCarousel.length > 0
+            ? itensCarousel.map((item, index) => (
+                <img id='img' key={index} src={item.img} alt='' />
+              ))
+            : null}
 
           <img
             className='w-96'

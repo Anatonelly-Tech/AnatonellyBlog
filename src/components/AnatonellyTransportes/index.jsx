@@ -31,7 +31,7 @@ const index = () => {
 
   return (
     <div
-      id='SobreNos'
+      id='AnatonellyTransportes'
       className='w-full h-auto flex flex-col overflow-hidden bg-neutral-800  '
     >
       <span

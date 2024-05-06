@@ -35,7 +35,7 @@ const index = () => {
   return (
     <div
       id='AnatonellyLLC'
-      className='pb-20 w-screen h-auto flex flex-col -z-10  '
+      className='bg-neutral-200 w-screen h-auto flex flex-col -z-10  '
     >
       <div className='w-full flex flex-col items-start bg-neutral-200 p-5'>
         <span

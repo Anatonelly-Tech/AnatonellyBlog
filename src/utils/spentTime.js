@@ -1,10 +1,7 @@
 export default function spentTime(time) {
   const actualTime = new Date();
-  console.log(actualTime);
 
-  console.log('time', time);
   const pastTime = new Date(time);
-  console.log(pastTime);
   const difference = actualTime - pastTime;
   const seconds = Math.floor(difference / 1000);
   const minutes = Math.floor(seconds / 60);
@@ -16,7 +13,7 @@ export default function spentTime(time) {
   if (years > 0) {
     return `${years} Ano${years > 1 ? 's' : ''} atrás`;
   } else if (months > 0) {
-    return `${months} ${months > 1 ? 'Mês' : 'Meses'} atrás`;
+    return `${months} ${months > 1 ? 'Meses' : 'Mês'} atrás`;
   } else if (days > 0) {
     return `${days} Dia${days > 1 ? 's' : ''} atrás`;
   } else if (hours > 0) {
