@@ -31,12 +31,12 @@ const index = () => {
 
   return (
     <div
-      id='SobreNos'
+      id='AnatonellyTransportes'
       className='w-full h-auto flex flex-col overflow-hidden bg-neutral-800  '
     >
       <span
         id='TitleLetter'
-        className=' md:text-8xl xxs:text-3xl md:px-14 xxs:pt-10 md:pt-0 xxs:text-center md:text-start font-black text-white '
+        className='text-white p-10 flex items-start justify-start font-black lg:text-6xl md:text-6xl sm:text-4xl xs:text-2xl xxs:xl text-start'
       >
         Sobre nós
       </span>
